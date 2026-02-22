@@ -87,6 +87,39 @@ document.addEventListener("DOMContentLoaded", () => {
     updateActiveNavLink();
 });
 
+// STATS BAR: Contador animado
+function animateCounters() {
+    const counters = document.querySelectorAll(".stat-number");
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (!entry.isIntersecting) return;
+
+            const el = entry.target;
+            const target = parseInt(el.getAttribute("data-target"));
+            const duration = 1500;
+            const step = target / (duration / 16);
+            let current = 0;
+
+            const update = () => {
+                current += step;
+                if (current < target) {
+                    el.textContent = Math.floor(current);
+                    requestAnimationFrame(update);
+                } else {
+                    el.textContent = target;
+                }
+            };
+            update();
+            observer.unobserve(el);
+        });
+    }, { threshold: 0.5 });
+
+    counters.forEach(counter => observer.observe(counter));
+}
+
+animateCounters();
+
 // =============================================
 // EVENTOS DE SCROLL
 // =============================================
