@@ -466,3 +466,83 @@ body {
     70%  { box-shadow: 0 0 0 7px rgba(74, 222, 128, 0); }
     100% { box-shadow: 0 0 0 0 rgba(74, 222, 128, 0); }
 }
+
+/* =============================================
+   CERTIFICACIONES
+   ============================================= */
+.cert-card {
+    background: white;
+    border-radius: 16px;
+    border: 1px solid #E2E8F0;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.04);
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.cert-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 35px rgba(15, 23, 42, 0.1);
+    border-color: var(--color-secundario);
+}
+
+.cert-img-container {
+    width: 100%;
+    overflow: hidden;
+    background: #F8FAFC;
+    border-bottom: 1px solid #E2E8F0;
+}
+
+.cert-img-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.cert-card:hover .cert-img-container img {
+    transform: scale(1.02);
+}
+
+.cert-body {
+    padding: 1.5rem;
+}
+
+.cert-issuer {
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: var(--color-secundario);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    display: block;
+    margin-bottom: 0.4rem;
+}
+
+.cert-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--color-principal);
+    margin-bottom: 0.3rem;
+}
+
+.cert-date {
+    font-size: 0.82rem;
+    color: var(--color-acento);
+    margin-bottom: 1rem;
+}
+
+.cert-skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+}
+
+.cert-badge {
+    background: rgba(37, 99, 235, 0.05);
+    color: var(--color-secundario);
+    border: 1px solid rgba(37, 99, 235, 0.2);
+    padding: 0.25rem 0.7rem;
+    border-radius: 6px;
+    font-size: 0.78rem;
+    font-weight: 600;
+}
