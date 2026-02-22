@@ -250,3 +250,187 @@ body {
     color: white;
     padding: 5rem 0;
 }
+
+/* =============================================
+   FEATURED PROJECT
+   ============================================= */
+.featured-project {
+    background: linear-gradient(160deg, #0F172A 0%, #1e293b 60%, #0F172A 100%);
+    padding: 5rem 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.featured-project::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -20%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(37, 99, 235, 0.08) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.featured-label {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.featured-label span {
+    background: rgba(37, 99, 235, 0.15);
+    color: var(--color-secundario);
+    border: 1px solid rgba(37, 99, 235, 0.3);
+    padding: 0.4rem 1.2rem;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.featured-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.featured-subtitle {
+    color: #94A3B8;
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 3rem;
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+/* MÉTRICAS */
+.featured-metrics {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-bottom: 3rem;
+}
+
+.featured-metric {
+    text-align: center;
+    background: rgba(37, 99, 235, 0.08);
+    border: 1px solid rgba(37, 99, 235, 0.2);
+    border-radius: 12px;
+    padding: 1.2rem 2rem;
+    min-width: 180px;
+    transition: all 0.3s ease;
+}
+
+.featured-metric:hover {
+    background: rgba(37, 99, 235, 0.15);
+    border-color: var(--color-secundario);
+    transform: translateY(-4px);
+}
+
+.featured-metric-value {
+    display: block;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--color-secundario);
+    line-height: 1;
+    margin-bottom: 0.4rem;
+}
+
+.featured-metric-label {
+    font-size: 0.8rem;
+    color: #64748B;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    font-weight: 600;
+}
+
+/* FLUJO PROBLEMA → METODOLOGÍA → RESULTADO */
+.featured-flow {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 3rem;
+}
+
+.featured-flow-item {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    padding: 1.5rem;
+    text-align: center;
+    flex: 1;
+    min-width: 220px;
+    max-width: 280px;
+    transition: all 0.3s ease;
+}
+
+.featured-flow-item:hover {
+    background: rgba(37, 99, 235, 0.08);
+    border-color: rgba(37, 99, 235, 0.3);
+}
+
+.featured-flow-icon {
+    font-size: 1.8rem;
+    color: var(--color-secundario);
+    margin-bottom: 0.8rem;
+}
+
+.featured-flow-item h5 {
+    color: #ffffff;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.featured-flow-item p {
+    color: #94A3B8;
+    font-size: 0.88rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.featured-flow-arrow {
+    font-size: 1.5rem;
+    color: rgba(37, 99, 235, 0.5);
+    align-self: center;
+    padding-top: 0.5rem;
+}
+
+/* FOOTER DEL FEATURED */
+.featured-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.featured-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+}
+
+.featured-badge {
+    background: rgba(37, 99, 235, 0.1);
+    color: var(--color-secundario);
+    border: 1px solid rgba(37, 99, 235, 0.25);
+    padding: 0.3rem 0.8rem;
+    border-radius: 6px;
+    font-size: 0.82rem;
+    font-weight: 600;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .featured-flow-arrow { display: none; }
+    .featured-title { font-size: 1.8rem; }
+    .featured-metrics { gap: 1rem; }
+    .featured-metric { min-width: 140px; padding: 1rem; }
+}
