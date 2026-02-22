@@ -546,3 +546,17 @@ body {
     font-size: 0.78rem;
     font-weight: 600;
 }
+
+/* =============================================
+   SOBRE MÍ — CLOSING LINE
+   ============================================= */
+.about-closing {
+    font-weight: 700;
+    color: var(--color-secundario);
+    font-size: 1.15rem;
+    border-left: 3px solid var(--color-secundario);
+    padding-left: 1rem;
+    text-align: left;
+    max-width: 480px;
+    margin: 0 auto;
+}
