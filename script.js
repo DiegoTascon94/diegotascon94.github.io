@@ -1,32 +1,37 @@
-// 1. Configuración inicial
+// =============================================
+// VARIABLES GLOBALES
+// =============================================
 let currentLang = "es";
 
-// 2. Lógica de Typewriter (Máquina de escribir) reutilizable
+// =============================================
+// TYPEWRITER EFFECT
+// =============================================
 function typeWriterEffect(element, text) {
     if (!element) return;
     element.textContent = "";
     let i = 0;
-    
-    // Limpiamos cualquier intervalo previo si fuera necesario
+
     function type() {
         if (i < text.length) {
             element.textContent += text.charAt(i);
             i++;
-            setTimeout(type, 20); 
+            setTimeout(type, 22);
         }
     }
     type();
 }
 
-// 3. Función de cambio de idioma
+// =============================================
+// CAMBIO DE IDIOMA
+// =============================================
 function toggleLanguage() {
     currentLang = currentLang === "es" ? "en" : "es";
-    
+
     document.querySelectorAll("[data-es]").forEach(el => {
         const newText = el.getAttribute(`data-${currentLang}`);
-        
-        // Si es el subtítulo, aplicamos el efecto visual, si no, texto directo
-        if (el.classList.contains('header-title-sub')) {
+        if (!newText) return;
+
+        if (el.classList.contains("header-title-sub")) {
             typeWriterEffect(el, newText);
         } else {
             el.textContent = newText;
@@ -34,38 +39,57 @@ function toggleLanguage() {
     });
 
     const langBtn = document.getElementById("langBtn");
-    if (langBtn) {
-        langBtn.textContent = currentLang === "es" ? "EN" : "ES";
-    }
+    if (langBtn) langBtn.textContent = currentLang === "es" ? "EN" : "ES";
 }
 
-// 4. Ejecución al cargar la página
-window.onload = () => {
-    // Inicializar AOS (Animaciones)
-    if (typeof AOS !== 'undefined') {
-        AOS.init({ duration: 1000, once: true });
-    }
+// =============================================
+// NAVBAR: HIGHLIGHT DE SECCIÓN ACTIVA
+// =============================================
+function updateActiveNavLink() {
+    const sections = document.querySelectorAll("section[id], header[id]");
+    const navLinks = document.querySelectorAll(".nav-link[href^='#']");
+    const scrollPos = window.scrollY + 100;
 
-    // Iniciar Typewriter inicial en el subtítulo
-    const subTitle = document.querySelector('.header-title-sub');
-    if (subTitle) {
-        const initialText = subTitle.getAttribute(`data-${currentLang}`) || subTitle.textContent;
-        typeWriterEffect(subTitle, initialText);
-    }
-};
+    let currentSection = "";
 
-// 5. Scroll suave para enlaces internos
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const targetId = this.getAttribute('href');
-        const target = document.querySelector(targetId);
-        
-        if (target) {
-            window.scrollTo({
-                top: target.offsetTop - 70, // Espacio para que la navbar no tape el título
-                behavior: 'smooth'
-            });
+    sections.forEach(section => {
+        if (scrollPos >= section.offsetTop) {
+            currentSection = section.getAttribute("id");
         }
     });
+
+    navLinks.forEach(link => {
+        link.classList.remove("active-section");
+        if (link.getAttribute("href") === `#${currentSection}`) {
+            link.classList.add("active-section");
+        }
+    });
+}
+
+// =============================================
+// INICIALIZACIÓN AL CARGAR EL DOM
+// =============================================
+document.addEventListener("DOMContentLoaded", () => {
+
+    // Inicializar AOS
+    if (typeof AOS !== "undefined") {
+        AOS.init({ duration: 900, once: true, offset: 80 });
+    }
+
+    // Typewriter en el subtítulo del hero
+    const subTitle = document.querySelector(".header-title-sub");
+    if (subTitle) {
+        const initialText = subTitle.getAttribute(`data-${currentLang}`);
+        if (initialText) typeWriterEffect(subTitle, initialText);
+    }
+
+    // Activar highlight de sección al cargar
+    updateActiveNavLink();
+});
+
+// =============================================
+// EVENTOS DE SCROLL
+// =============================================
+window.addEventListener("scroll", () => {
+    updateActiveNavLink();
 });
