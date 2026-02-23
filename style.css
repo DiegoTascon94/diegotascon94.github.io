@@ -560,3 +560,197 @@ body {
     max-width: 480px;
     margin: 0 auto;
 }
+
+/* =============================================
+   ABOUT — DATA WIDGET
+   ============================================= */
+.data-widget {
+    background: #0F172A;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(15, 23, 42, 0.3);
+    border: 1px solid rgba(37, 99, 235, 0.2);
+}
+
+.data-widget-header {
+    background: #1e293b;
+    padding: 0.75rem 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.data-widget-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+.data-widget-dot.red    { background: #FF5F57; }
+.data-widget-dot.yellow { background: #FFBD2E; }
+.data-widget-dot.green  { background: #28C840; }
+
+.data-widget-title {
+    font-size: 0.75rem;
+    color: #64748B;
+    margin-left: 0.5rem;
+    font-family: monospace;
+}
+
+.data-widget-body {
+    padding: 2rem;
+}
+
+/* BARRAS ANIMADAS */
+.data-chart {
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.chart-bars {
+    display: flex;
+    align-items: flex-end;
+    gap: 0.6rem;
+    height: 140px;
+    margin-bottom: 0.5rem;
+}
+
+.chart-bar {
+    flex: 1;
+    border-radius: 4px 4px 0 0;
+    border: 1px solid rgba(37, 99, 235, 0.3);
+    background: rgba(37, 99, 235, 0.25);
+    transform-origin: bottom;
+    animation: bar-grow 1s ease forwards;
+    animation-delay: var(--bar-delay, 0s);
+    height: 0;
+}
+
+.chart-bar:nth-child(1) { --bar-final: 45%; --bar-delay: 0.3s; }
+.chart-bar:nth-child(2) { --bar-final: 65%; --bar-delay: 0.5s; }
+.chart-bar:nth-child(3) { --bar-final: 55%; --bar-delay: 0.7s; }
+.chart-bar:nth-child(4) { --bar-final: 80%; --bar-delay: 0.9s; }
+.chart-bar:nth-child(5) { --bar-final: 70%; --bar-delay: 1.1s; }
+.chart-bar:nth-child(6) { --bar-final: 95%; --bar-delay: 1.3s; }
+
+@keyframes bar-grow {
+    0%   { height: 0; opacity: 0; }
+    60%  { opacity: 1; }
+    100% { height: var(--bar-final); }
+}
+
+.chart-bar.active {
+    background: rgba(37, 99, 235, 0.7);
+    border-color: #2563EB;
+    box-shadow: 0 0 14px rgba(37, 99, 235, 0.5);
+    animation: bar-grow 1s ease forwards, bar-pulse 2s ease-in-out 2s infinite;
+}
+
+@keyframes bar-pulse {
+    0%, 100% { box-shadow: 0 0 14px rgba(37, 99, 235, 0.5); }
+    50%       { box-shadow: 0 0 28px rgba(37, 99, 235, 0.9); }
+}
+
+.chart-bar:hover {
+    background: rgba(37, 99, 235, 0.55);
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+/* LÍNEA DE TENDENCIA */
+.chart-line-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 140px;
+    pointer-events: none;
+}
+
+.trend-line {
+    width: 100%;
+    height: 100%;
+}
+
+.trend-path {
+    stroke-dasharray: 500;
+    stroke-dashoffset: 500;
+    animation: draw-line 2s ease forwards 1.5s;
+}
+
+.trend-dot {
+    opacity: 0;
+    animation: fade-in 0.3s ease forwards 3.2s;
+}
+
+@keyframes draw-line {
+    to { stroke-dashoffset: 0; }
+}
+
+@keyframes fade-in {
+    to { opacity: 1; }
+}
+
+/* MÉTRICAS */
+.data-metrics {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+    border-top: 1px solid rgba(255,255,255,0.05);
+    padding-top: 1.5rem;
+}
+
+.data-metric-item {
+    text-align: center;
+    flex: 1;
+    padding: 0.5rem;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+}
+
+.data-metric-item:hover {
+    background: rgba(37, 99, 235, 0.1);
+}
+
+.data-metric-value {
+    display: block;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #2563EB;
+    line-height: 1;
+    margin-bottom: 0.3rem;
+    transition: color 0.3s ease;
+}
+
+.data-metric-item:hover .data-metric-value {
+    color: #60A5FA;
+}
+
+.data-metric-label {
+    font-size: 0.7rem;
+    color: #64748B;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* STATUS */
+.data-status {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.75rem;
+    color: #4ADE80;
+    font-family: monospace;
+    border-top: 1px solid rgba(255,255,255,0.05);
+    padding-top: 1.2rem;
+}
+
+.data-status-dot {
+    width: 7px;
+    height: 7px;
+    background: #4ADE80;
+    border-radius: 50%;
+    animation: pulse-dot 2s infinite;
+    flex-shrink: 0;
+}

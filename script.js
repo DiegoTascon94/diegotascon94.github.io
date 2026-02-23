@@ -87,6 +87,24 @@ document.addEventListener("DOMContentLoaded", () => {
     updateActiveNavLink();
 });
 
+// DATA WIDGET: Reiniciar animaciones al hacer scroll
+const dataWidget = document.querySelector('.data-widget');
+if (dataWidget) {
+    const widgetObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                document.querySelectorAll('.chart-bar').forEach(bar => {
+                    bar.style.animation = 'none';
+                    bar.offsetHeight; // fuerza reflow
+                    bar.style.animation = '';
+                });
+                widgetObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.3 });
+    widgetObserver.observe(dataWidget);
+}
+
 // STATS BAR: Contador animado
 function animateCounters() {
     const counters = document.querySelectorAll(".stat-number");

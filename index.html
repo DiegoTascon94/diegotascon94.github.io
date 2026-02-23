@@ -110,13 +110,14 @@
 </section>
 
 <!-- SOBRE MÍ -->
-<!-- SOBRE MÍ -->
 <section class="page-section" id="about">
-    <div class="container px-4 text-center">
-        <h2 class="section-title" data-aos="fade-up" 
+    <div class="container px-4">
+        <h2 class="section-title" data-aos="fade-up"
             data-es="Sobre mí" data-en="About Me">Sobre mí</h2>
-        <div class="row justify-content-center">
-            <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
+        <div class="row justify-content-center align-items-center g-5 mt-2">
+
+            <!-- TEXTO -->
+            <div class="col-lg-6" data-aos="fade-right" data-aos-delay="100">
                 <p class="lead mb-4"
                     data-es="Antes de convertirme en analista, pasé años en roles operativos y administrativos donde la precisión de los datos era crítica para la operación diaria. Ahí entendí algo fundamental: los datos no solo se registran, se interpretan — y esa interpretación es la que mueve los resultados del negocio."
                     data-en="Before becoming an analyst, I spent years in operational and administrative roles where data accuracy was critical to daily operations. There I understood something fundamental: data isn't just recorded — it's interpreted, and that interpretation is what drives business results.">
@@ -138,6 +139,63 @@
                     No me quedo en el dashboard. Conecto los números con decisiones.
                 </p>
             </div>
+
+            <!-- WIDGET VISUAL DE DATOS -->
+            <div class="col-lg-5" data-aos="fade-left" data-aos-delay="200">
+                <div class="data-widget">
+                    <div class="data-widget-header">
+                        <span class="data-widget-dot red"></span>
+                        <span class="data-widget-dot yellow"></span>
+                        <span class="data-widget-dot green"></span>
+                        <span class="data-widget-title">analysis_output.py</span>
+                    </div>
+                    <div class="data-widget-body">
+                        <div class="data-chart">
+                            <div class="chart-bars">
+                                <div class="chart-bar" style="--bar-height: 45%;" data-aos="fade-up" data-aos-delay="400"></div>
+                                <div class="chart-bar" style="--bar-height: 65%;" data-aos="fade-up" data-aos-delay="500"></div>
+                                <div class="chart-bar" style="--bar-height: 55%;" data-aos="fade-up" data-aos-delay="600"></div>
+                                <div class="chart-bar" style="--bar-height: 80%;" data-aos="fade-up" data-aos-delay="700"></div>
+                                <div class="chart-bar" style="--bar-height: 70%;" data-aos="fade-up" data-aos-delay="800"></div>
+                                <div class="chart-bar active" style="--bar-height: 95%;" data-aos="fade-up" data-aos-delay="900"></div>
+                            </div>
+                            <div class="chart-line-container">
+                                <svg viewBox="0 0 300 100" class="trend-line">
+                                    <polyline
+                                        points="0,80 50,65 100,70 150,45 200,50 250,25 300,10"
+                                        fill="none"
+                                        stroke="#2563EB"
+                                        stroke-width="2.5"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        class="trend-path"
+                                    />
+                                    <circle cx="300" cy="10" r="4" fill="#2563EB" class="trend-dot"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="data-metrics">
+                            <div class="data-metric-item">
+                                <span class="data-metric-value">+88%</span>
+                                <span class="data-metric-label" data-es="Precisión Modelo" data-en="Model Accuracy">Precisión Modelo</span>
+                            </div>
+                            <div class="data-metric-item">
+                                <span class="data-metric-value">+60%</span>
+                                <span class="data-metric-label" data-es="Churn Detectado" data-en="Churn Detected">Churn Detectado</span>
+                            </div>
+                            <div class="data-metric-item">
+                                <span class="data-metric-value">-12%</span>
+                                <span class="data-metric-label" data-es="Error Predicción" data-en="Prediction Error">Error Predicción</span>
+                            </div>
+                        </div>
+                        <div class="data-status">
+                            <span class="data-status-dot"></span>
+                            <span data-es="Análisis en tiempo real" data-en="Real-time analysis">Análisis en tiempo real</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
 </section>
