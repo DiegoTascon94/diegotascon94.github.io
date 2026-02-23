@@ -881,3 +881,136 @@ html, body {
         overflow: hidden !important;
     }
 }
+
+/* =============================================
+   INDUSTRIAS TARGET
+   ============================================= */
+.industry-card {
+    background: white;
+    border: 1px solid #E2E8F0;
+    border-radius: 16px;
+    padding: 2rem;
+    height: 100%;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.industry-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 35px rgba(15, 23, 42, 0.08);
+    border-color: var(--color-secundario);
+}
+
+.industry-icon {
+    font-size: 2.5rem;
+    color: var(--color-secundario);
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.industry-title {
+    font-weight: 700;
+    color: var(--color-principal);
+    margin-bottom: 0.75rem;
+    font-size: 1rem;
+}
+
+.industry-desc {
+    font-size: 0.88rem;
+    color: #64748B;
+    line-height: 1.6;
+    margin-bottom: 1.2rem;
+}
+
+.industry-projects {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    justify-content: center;
+}
+
+.industry-badge {
+    background: rgba(37, 99, 235, 0.06);
+    color: var(--color-secundario);
+    border: 1px solid rgba(37, 99, 235, 0.2);
+    padding: 0.25rem 0.7rem;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+/* =============================================
+   ACTUALMENTE APRENDIENDO
+   ============================================= */
+.learning-card {
+    background: white;
+    border: 1px solid #E2E8F0;
+    border-radius: 16px;
+    padding: 1.8rem;
+    height: 100%;
+    transition: all 0.3s ease;
+}
+
+.learning-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 35px rgba(15, 23, 42, 0.08);
+    border-color: var(--color-secundario);
+}
+
+.learning-header {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-bottom: 1rem;
+}
+
+.learning-logo {
+    width: 24px;
+    height: 24px;
+    filter: invert(35%) sepia(98%) saturate(1000%) hue-rotate(210deg);
+}
+
+.learning-icon-alt {
+    font-size: 1.4rem;
+    color: var(--color-secundario);
+}
+
+.learning-platform {
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: var(--color-secundario);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.learning-title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--color-principal);
+    margin-bottom: 0.5rem;
+}
+
+.learning-desc {
+    font-size: 0.85rem;
+    color: #64748B;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.learning-status {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.78rem;
+    color: #4ADE80;
+    font-weight: 600;
+}
+
+.learning-dot {
+    width: 7px;
+    height: 7px;
+    background: #4ADE80;
+    border-radius: 50%;
+    animation: pulse-dot 2s infinite;
+    flex-shrink: 0;
+}
