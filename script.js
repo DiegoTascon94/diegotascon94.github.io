@@ -138,6 +138,77 @@ function animateCounters() {
 
 animateCounters();
 
+// PARALLAX en Hero
+const masthead = document.querySelector('.masthead');
+const mastheadBefore = document.querySelector('.masthead::before');
+
+if (masthead) {
+    window.addEventListener('scroll', () => {
+        const scrolled = window.scrollY;
+        const rate = scrolled * 0.4;
+        masthead.style.backgroundPositionY = `-${rate}px`;
+    }, { passive: true });
+}
+
+// PARTÍCULAS en Hero
+if (typeof tsParticles !== "undefined") {
+    tsParticles.load("particles-hero", {
+        fpsLimit: 60,
+        particles: {
+            number: {
+                value: 60,
+                density: { enable: true, area: 800 }
+            },
+            color: { value: "#2563EB" },
+            shape: { type: "circle" },
+            opacity: {
+                value: 0.35,
+                random: true,
+                animation: {
+                    enable: true,
+                    speed: 0.8,
+                    minimumValue: 0.1,
+                    sync: false
+                }
+            },
+            size: {
+                value: { min: 1, max: 3 },
+                random: true
+            },
+            links: {
+                enable: true,
+                distance: 140,
+                color: "#2563EB",
+                opacity: 0.15,
+                width: 1
+            },
+            move: {
+                enable: true,
+                speed: 0.8,
+                direction: "none",
+                random: true,
+                straight: false,
+                outModes: "out"
+            }
+        },
+        interactivity: {
+            events: {
+                onHover: {
+                    enable: true,
+                    mode: "grab"
+                }
+            },
+            modes: {
+                grab: {
+                    distance: 140,
+                    links: { opacity: 0.4 }
+                }
+            }
+        },
+        detectRetina: true
+    });
+}
+
 // =============================================
 // EVENTOS DE SCROLL
 // =============================================
