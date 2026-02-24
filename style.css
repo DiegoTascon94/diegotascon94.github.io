@@ -1014,3 +1014,11 @@ html, body {
     animation: pulse-dot 2s infinite;
     flex-shrink: 0;
 }
+
+/* AI BADGE */
+.ai-badge {
+    background: rgba(99, 37, 235, 0.06) !important;
+    border: 1px solid rgba(99, 37, 235, 0.25) !important;
+    color: #7C3AED !important;
+    font-weight: 700 !important;
+}
