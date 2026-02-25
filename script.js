@@ -243,6 +243,19 @@ skillsTabs.forEach(tab => {
     });
 });
 
+// TABS DE FORMACIÓN
+const formationTabs = document.querySelectorAll('.formation-tab');
+const formationContents = document.querySelectorAll('.formation-content');
+
+formationTabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+        formationTabs.forEach(t => t.classList.remove('active'));
+        formationContents.forEach(c => c.classList.remove('active'));
+        tab.classList.add('active');
+        document.getElementById('tab-' + tab.getAttribute('data-tab')).classList.add('active');
+    });
+});
+
 // =============================================
 // EVENTOS DE SCROLL
 // =============================================

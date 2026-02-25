@@ -1131,3 +1131,44 @@ html, body {
     box-shadow: 0 16px 35px rgba(15, 23, 42, 0.08);
     border-color: var(--color-secundario);
 }
+
+/* =============================================
+   TABS DE FORMACIÓN
+   ============================================= */
+.formation-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 0.6rem;
+    margin-bottom: 0.5rem;
+}
+
+.formation-tab {
+    background: white;
+    border: 1px solid #E2E8F0;
+    color: #64748B;
+    padding: 0.5rem 1.8rem;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.formation-tab:hover {
+    border-color: var(--color-secundario);
+    color: var(--color-secundario);
+}
+
+.formation-tab.active {
+    background: var(--color-secundario);
+    border-color: var(--color-secundario);
+    color: white;
+}
+
+.formation-content {
+    display: none;
+}
+
+.formation-content.active {
+    display: block;
+}
