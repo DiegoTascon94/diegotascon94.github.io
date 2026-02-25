@@ -230,6 +230,19 @@ filterBtns.forEach(btn => {
     });
 });
 
+// TABS DE HABILIDADES
+const skillsTabs = document.querySelectorAll('.skills-tab');
+const tabContents = document.querySelectorAll('.tab-content');
+
+skillsTabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+        skillsTabs.forEach(t => t.classList.remove('active'));
+        tabContents.forEach(c => c.classList.remove('active'));
+        tab.classList.add('active');
+        document.getElementById('tab-' + tab.getAttribute('data-tab')).classList.add('active');
+    });
+});
+
 // =============================================
 // EVENTOS DE SCROLL
 // =============================================

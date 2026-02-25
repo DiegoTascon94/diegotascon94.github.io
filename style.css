@@ -1064,3 +1064,70 @@ html, body {
 .project-item.hidden {
     display: none;
 }
+
+/* =============================================
+   TABS DE HABILIDADES
+   ============================================= */
+.skills-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 0.6rem;
+    margin-bottom: 0.5rem;
+}
+
+.skills-tab {
+    background: white;
+    border: 1px solid #E2E8F0;
+    color: #64748B;
+    padding: 0.5rem 1.8rem;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.skills-tab:hover {
+    border-color: var(--color-secundario);
+    color: var(--color-secundario);
+}
+
+.skills-tab.active {
+    background: var(--color-secundario);
+    border-color: var(--color-secundario);
+    color: white;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* HOVER SOFT SKILLS DENTRO DE TAB */
+#tab-interpersonal .p-4 {
+    transition: all 0.3s ease;
+    border: 1px solid #E2E8F0;
+}
+
+#tab-interpersonal .p-4:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 35px rgba(15, 23, 42, 0.08) !important;
+    border-color: var(--color-secundario);
+}
+
+/* HOVER SKILL COLUMN */
+.skill-column {
+    transition: all 0.3s ease;
+    border: 1px solid #E2E8F0;
+    border-radius: 12px;
+    background: white;
+}
+
+.skill-column:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 35px rgba(15, 23, 42, 0.08);
+    border-color: var(--color-secundario);
+}
