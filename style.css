@@ -1022,3 +1022,45 @@ html, body {
     color: #7C3AED !important;
     font-weight: 700 !important;
 }
+
+/* =============================================
+   FILTRO DE PROYECTOS
+   ============================================= */
+.project-filters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.6rem;
+    margin-bottom: 1rem;
+}
+
+.filter-btn {
+    background: white;
+    border: 1px solid #E2E8F0;
+    color: #64748B;
+    padding: 0.4rem 1.2rem;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.filter-btn:hover {
+    border-color: var(--color-secundario);
+    color: var(--color-secundario);
+}
+
+.filter-btn.active {
+    background: var(--color-secundario);
+    border-color: var(--color-secundario);
+    color: white;
+}
+
+.project-item {
+    transition: all 0.4s ease;
+}
+
+.project-item.hidden {
+    display: none;
+}

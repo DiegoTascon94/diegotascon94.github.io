@@ -596,10 +596,25 @@
 <!-- PROYECTOS -->
 <section class="page-section bg-white" id="projects">
     <div class="container px-4">
-        <h2 class="section-title" data-aos="fade-up" data-es="Proyectos de Análisis de Datos" data-en="Data Analysis Projects">Proyectos de Análisis de Datos</h2>
-        <div class="row g-4 mt-2">
+        <h2 class="section-title" data-aos="fade-up"
+            data-es="Proyectos de Análisis de Datos"
+            data-en="Data Analysis Projects">Proyectos de Análisis de Datos</h2>
 
-            <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+        <!-- FILTROS -->
+        <div class="project-filters" data-aos="fade-up" data-aos-delay="100">
+            <button class="filter-btn active" data-filter="all"
+                data-es="Todos" data-en="All">Todos</button>
+            <button class="filter-btn" data-filter="retail"
+                data-es="Retail & E-commerce" data-en="Retail & E-commerce">Retail & E-commerce</button>
+            <button class="filter-btn" data-filter="logistica"
+                data-es="Logística" data-en="Logistics">Logística</button>
+            <button class="filter-btn" data-filter="marketing"
+                data-es="Marketing Digital" data-en="Digital Marketing">Marketing Digital</button>
+        </div>
+
+        <div class="row g-4 mt-2" id="projects-grid">
+
+            <div class="col-md-6 col-lg-4 project-item" data-category="retail">
                 <div class="card project-card">
                     <div class="project-img-container">
                         <img src="assets/img/segmentacion.jpeg" alt="Segmentación y Predicción de Cancelación" loading="lazy">
@@ -625,7 +640,7 @@
                 </div>
             </div>
 
-            <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="col-md-6 col-lg-4 project-item" data-category="marketing">
                 <div class="card project-card">
                     <div class="project-img-container">
                         <img src="assets/img/Análisis Experimental AB Test.jpeg" alt="Análisis Experimental A/B Test" loading="lazy">
@@ -651,7 +666,7 @@
                 </div>
             </div>
 
-            <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="col-md-6 col-lg-4 project-item" data-category="logistica">
                 <div class="card project-card">
                     <div class="project-img-container">
                         <img src="assets/img/forecasting.jpeg" alt="Forecasting de Demanda Retail" loading="lazy">
@@ -677,7 +692,7 @@
                 </div>
             </div>
 
-            <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="col-md-6 col-lg-4 project-item" data-category="logistica">
                 <div class="card project-card">
                     <div class="project-img-container">
                         <img src="assets/img/brazilian.jpeg" alt="Brazilian E-Commerce Olist" loading="lazy">
@@ -703,7 +718,7 @@
                 </div>
             </div>
 
-            <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="col-md-6 col-lg-4 project-item" data-category="marketing">
                 <div class="card project-card">
                     <div class="project-img-container">
                         <img src="assets/img/Análisis de Ventas y Comportamiento de Clientes.jpeg" alt="Business Analytics Showz" loading="lazy">
@@ -729,7 +744,7 @@
                 </div>
             </div>
 
-            <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="col-md-6 col-lg-4 project-item" data-category="retail">
                 <div class="card project-card">
                     <div class="project-img-container">
                         <img src="assets/img/Modelado Predictivo de Precios de Vivienda.jpeg" alt="Modelado de Precios Inmobiliarios" loading="lazy">
