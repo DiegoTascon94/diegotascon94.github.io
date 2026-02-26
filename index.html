@@ -81,8 +81,8 @@
         <div class="row text-center justify-content-center g-4">
             <div class="col-6 col-md-3">
                 <div class="stat-item">
-                    <span class="stat-number" data-target="6">0</span>
-                    <span class="stat-label" data-es="Proyectos Completados" data-en="Completed Projects">Proyectos Completados</span>
+                    <span class="stat-number" data-target="3">0</span>
+                    <span class="stat-label" data-es="Proyectos Destacados" data-en="Featured Projects">Proyectos Destacados</span>
                 </div>
             </div>
             <div class="col-6 col-md-3">
@@ -613,41 +613,13 @@
         <div class="project-filters" data-aos="fade-up" data-aos-delay="100">
             <button class="filter-btn active" data-filter="all"
                 data-es="Todos" data-en="All">Todos</button>
-            <button class="filter-btn" data-filter="retail"
-                data-es="Retail & E-commerce" data-en="Retail & E-commerce">Retail & E-commerce</button>
-            <button class="filter-btn" data-filter="logistica"
-                data-es="Logística" data-en="Logistics">Logística</button>
             <button class="filter-btn" data-filter="marketing"
                 data-es="Marketing Digital" data-en="Digital Marketing">Marketing Digital</button>
+            <button class="filter-btn" data-filter="logistica"
+                data-es="Logística" data-en="Logistics">Logística</button>
         </div>
 
-        <div class="row g-4 mt-2" id="projects-grid">
-
-            <div class="col-md-6 col-lg-4 project-item" data-category="retail">
-                <div class="card project-card">
-                    <div class="project-img-container">
-                        <img src="assets/img/segmentacion.jpeg" alt="Segmentación y Predicción de Cancelación" loading="lazy">
-                        <div class="project-overlay-text">
-                            <span class="project-overlay-label">Retail & E-commerce</span>
-                            <p class="project-overlay-title">Churn prediction con K-Means y pruebas estadísticas</p>
-                        </div>
-                    </div>
-                    <div class="card-body d-flex flex-column text-center">
-                        <h5 class="card-title fw-bold" data-es="Segmentación y Predicción de Cancelación" data-en="Customer Churn & Segmentation">Segmentación y Predicción de Cancelación</h5>
-                        <p class="card-text small text-muted flex-grow-1"
-                            data-es="Identifiqué que usuarios con actividad debajo del percentil 25 tienen un 60% más de probabilidad de desertar, permitiendo diseñar campañas de retención focalizadas."
-                            data-en="Identified that users below the 25th percentile of activity are 60% more likely to churn, enabling the design of targeted retention campaigns.">
-                            Identifiqué que usuarios con actividad debajo del percentil 25 tienen un 60% más de probabilidad de desertar, permitiendo diseñar campañas de retención focalizadas.
-                        </p>
-                        <div class="mb-3">
-                            <span class="badge bg-light text-primary border border-primary">Python</span>
-                            <span class="badge bg-light text-primary border border-primary">SciPy</span>
-                            <span class="badge bg-light text-primary border border-primary">K-Means</span>
-                        </div>
-                        <a href="https://github.com/DiegoTascon94/customer-intelligence-churn-analysis.git" target="_blank" class="btn btn-sm btn-outline-primary mt-auto" data-es="Ver Repositorio" data-en="View Repository">Ver Repositorio</a>
-                    </div>
-                </div>
-            </div>
+        <div class="row g-4 mt-2 justify-content-center" id="projects-grid">
 
             <div class="col-md-6 col-lg-4 project-item" data-category="marketing">
                 <div class="card project-card">
@@ -701,32 +673,6 @@
                 </div>
             </div>
 
-            <div class="col-md-6 col-lg-4 project-item" data-category="logistica">
-                <div class="card project-card">
-                    <div class="project-img-container">
-                        <img src="assets/img/brazilian.jpeg" alt="Brazilian E-Commerce Olist" loading="lazy">
-                        <div class="project-overlay-text">
-                            <span class="project-overlay-label">Logística & E-commerce</span>
-                            <p class="project-overlay-title">Análisis de SLA logístico sobre +110,000 órdenes</p>
-                        </div>
-                    </div>
-                    <div class="card-body d-flex flex-column text-center">
-                        <h5 class="card-title fw-bold" data-es="Brazilian E-Commerce (Olist)" data-en="Brazilian E-Commerce (Olist)">Brazilian E-Commerce (Olist)</h5>
-                        <p class="card-text small text-muted flex-grow-1"
-                            data-es="Identifiqué una correlación directa entre retrasos logísticos y bajas calificaciones, proponiendo una reestructuración de rutas para mejorar el SLA de entrega."
-                            data-en="Identified a direct correlation between logistics delays and low ratings, proposing a route restructuring to improve delivery SLA.">
-                            Identifiqué una correlación directa entre retrasos logísticos y bajas calificaciones, proponiendo una reestructuración de rutas para mejorar el SLA de entrega.
-                        </p>
-                        <div class="mb-3">
-                            <span class="badge bg-light text-primary border border-primary">SQL</span>
-                            <span class="badge bg-light text-primary border border-primary">Python</span>
-                            <span class="badge bg-light text-primary border border-primary">ETL</span>
-                        </div>
-                        <a href="https://github.com/DiegoTascon94/olist-analysis.git" target="_blank" class="btn btn-sm btn-outline-primary mt-auto" data-es="Ver Repositorio" data-en="View Repository">Ver Repositorio</a>
-                    </div>
-                </div>
-            </div>
-
             <div class="col-md-6 col-lg-4 project-item" data-category="marketing">
                 <div class="card project-card">
                     <div class="project-img-container">
@@ -749,32 +695,6 @@
                             <span class="badge bg-light text-primary border border-primary">ROMI</span>
                         </div>
                         <a href="https://github.com/DiegoTascon94/online-retail-analysis.git" target="_blank" class="btn btn-sm btn-outline-primary mt-auto" data-es="Ver Repositorio" data-en="View Repository">Ver Repositorio</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-6 col-lg-4 project-item" data-category="retail">
-                <div class="card project-card">
-                    <div class="project-img-container">
-                        <img src="assets/img/Modelado Predictivo de Precios de Vivienda.jpeg" alt="Modelado de Precios Inmobiliarios" loading="lazy">
-                        <div class="project-overlay-text">
-                            <span class="project-overlay-label">Retail & Valuación</span>
-                            <p class="project-overlay-title">Pipeline ML con Ridge, Lasso y Random Forest</p>
-                        </div>
-                    </div>
-                    <div class="card-body d-flex flex-column text-center">
-                        <h5 class="card-title fw-bold" data-es="Modelado de Precios Inmobiliarios" data-en="Real Estate Price Modeling">Modelado de Precios Inmobiliarios</h5>
-                        <p class="card-text small text-muted flex-grow-1"
-                            data-es="Estructuré un pipeline de datos que reduce el error de tasación manual, proporcionando una base sólida para la valoración automatizada de activos."
-                            data-en="Structured a data pipeline that reduces manual appraisal error, providing a solid foundation for automated asset valuation.">
-                            Estructuré un pipeline de datos que reduce el error de tasación manual, proporcionando una base sólida para la valoración automatizada de activos.
-                        </p>
-                        <div class="mb-3">
-                            <span class="badge bg-light text-primary border border-primary">ML</span>
-                            <span class="badge bg-light text-primary border border-primary">Regression</span>
-                            <span class="badge bg-light text-primary border border-primary">Scikit-Learn</span>
-                        </div>
-                        <a href="https://github.com/DiegoTascon94/real-estate-price-prediction.git" target="_blank" class="btn btn-sm btn-outline-primary mt-auto" data-es="Ver Repositorio" data-en="View Repository">Ver Repositorio</a>
                     </div>
                 </div>
             </div>
