@@ -1172,3 +1172,134 @@ html, body {
 .formation-content.active {
     display: block;
 }
+
+/* =============================================
+   FEATURED PROJECT #2 — ONLINE RETAIL
+   ============================================= */
+.featured-retail {
+    background: linear-gradient(160deg, #0F172A 0%, #1a2744 60%, #0F172A 100%);
+    border-top: 1px solid rgba(37, 99, 235, 0.15);
+}
+
+/* GALERÍA DASHBOARD */
+.dashboard-gallery {
+    margin: 3rem 0;
+}
+
+.dashboard-gallery-title {
+    text-align: center;
+    color: #94A3B8;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 1.5rem;
+}
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.dashboard-img-wrapper {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.dashboard-img-wrapper:hover {
+    border-color: rgba(37, 99, 235, 0.5);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+}
+
+.dashboard-img-wrapper.active {
+    border-color: var(--color-secundario);
+    box-shadow: 0 0 20px rgba(37, 99, 235, 0.2);
+}
+
+.dashboard-img-wrapper img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.dashboard-img-wrapper:hover img {
+    transform: scale(1.04);
+}
+
+.dashboard-img-label {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(15, 23, 42, 0.9), transparent);
+    color: #CBD5E1;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 0.6rem 0.8rem;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .dashboard-img-wrapper img {
+        height: 200px;
+    }
+}
+
+/* INSIGHTS CLAVE */
+.featured-insights {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 800px;
+    margin: 0 auto 3rem;
+}
+
+.insight-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 10px;
+    padding: 1rem 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.insight-item:hover {
+    background: rgba(37, 99, 235, 0.06);
+    border-color: rgba(37, 99, 235, 0.2);
+}
+
+.insight-icon {
+    font-size: 1.2rem;
+    color: var(--color-secundario);
+    flex-shrink: 0;
+    margin-top: 0.1rem;
+}
+
+.insight-icon.warning {
+    color: #FBBF24;
+}
+
+.insight-item p {
+    color: #94A3B8;
+    font-size: 0.88rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.insight-item strong {
+    color: #ffffff;
+}
