@@ -249,6 +249,19 @@ formationTabs.forEach(tab => {
     });
 });
 
+// TABS DE FEATURED PROJECTS
+const featuredTabs = document.querySelectorAll('.featured-tab');
+const featuredContents = document.querySelectorAll('.featured-content');
+
+featuredTabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+        featuredTabs.forEach(t => t.classList.remove('active'));
+        featuredContents.forEach(c => c.classList.remove('active'));
+        tab.classList.add('active');
+        document.getElementById('tab-' + tab.getAttribute('data-tab')).classList.add('active');
+    });
+});
+
 // =============================================
 // EVENTOS DE SCROLL
 // =============================================
