@@ -262,6 +262,10 @@ featuredTabs.forEach(tab => {
     });
 });
 
+const projectCount = document.querySelectorAll('.project-item').length;
+const statProjects = document.getElementById('stat-projects');
+if (statProjects) statProjects.setAttribute('data-target', projectCount);
+
 // =============================================
 // EVENTOS DE SCROLL
 // =============================================
