@@ -257,14 +257,135 @@
 
         <!-- TABS -->
         <div class="featured-tabs" data-aos="fade-up" data-aos-delay="100">
-            <button class="featured-tab active" data-tab="retail"
+            <button class="featured-tab active" data-tab="clima"
+                data-es="Pipeline Riesgo Climático" data-en="Climate Risk Pipeline">Pipeline Riesgo Climático</button>
+            <button class="featured-tab" data-tab="retail"
                 data-es="Online Retail II" data-en="Online Retail II">Online Retail II</button>
             <button class="featured-tab" data-tab="forecasting"
                 data-es="Forecasting Retail" data-en="Forecasting Retail">Forecasting Retail</button>
         </div>
 
+        <!-- TAB: PIPELINE RIESGO CLIMÁTICO -->
+        <div class="featured-content active" id="tab-clima">
+
+            <h2 class="featured-title" data-aos="fade-up"
+                data-es="Pipeline de Riesgo Climático — Corredor Logístico Colombia"
+                data-en="Climate Risk Pipeline — Colombia Logistics Corridor">
+                Pipeline de Riesgo Climático — Corredor Logístico Colombia
+            </h2>
+
+            <p class="featured-subtitle" data-aos="fade-up" data-aos-delay="100"
+                data-es="Pipeline ETL automatizado que consume datos climáticos en tiempo real desde OpenWeatherMap, clasifica el riesgo operacional de 8 nodos logísticos clave de Colombia y alimenta un dashboard ejecutivo en Power BI."
+                data-en="Automated ETL pipeline consuming real-time climate data from OpenWeatherMap, classifying operational risk across 8 key Colombian logistics nodes and feeding an executive Power BI dashboard.">
+                Pipeline ETL automatizado que consume datos climáticos en tiempo real desde OpenWeatherMap, clasifica el riesgo operacional de 8 nodos logísticos clave de Colombia y alimenta un dashboard ejecutivo en Power BI.
+            </p>
+
+            <div class="featured-metrics">
+                <div class="featured-metric">
+                    <span class="featured-metric-value">8</span>
+                    <span class="featured-metric-label" data-es="Nodos Logísticos Monitoreados" data-en="Logistics Nodes Monitored">Nodos Logísticos Monitoreados</span>
+                </div>
+                <div class="featured-metric">
+                    <span class="featured-metric-value">1h</span>
+                    <span class="featured-metric-label" data-es="Frecuencia de Actualización" data-en="Update Frequency">Frecuencia de Actualización</span>
+                </div>
+                <div class="featured-metric">
+                    <span class="featured-metric-value">RT</span>
+                    <span class="featured-metric-label" data-es="Datos en Tiempo Real" data-en="Real-Time Data">Datos en Tiempo Real</span>
+                </div>
+            </div>
+
+            <div class="featured-flow">
+                <div class="featured-flow-item">
+                    <div class="featured-flow-icon"><i class="bi bi-cloud-rain"></i></div>
+                    <h5>API Extract</h5>
+                    <p data-es="Extracción automática cada hora desde OpenWeatherMap — temperatura, humedad, visibilidad, viento y condición climática por ciudad."
+                       data-en="Automatic hourly extraction from OpenWeatherMap — temperature, humidity, visibility, wind and weather condition per city.">
+                       Extracción automática cada hora desde OpenWeatherMap — temperatura, humedad, visibilidad, viento y condición climática por ciudad.
+                    </p>
+                </div>
+                <div class="featured-flow-arrow"><i class="bi bi-arrow-right"></i></div>
+                <div class="featured-flow-item">
+                    <div class="featured-flow-icon"><i class="bi bi-server"></i></div>
+                    <h5>Transform & Load</h5>
+                    <p data-es="Clasificación de riesgo Alto/Medio/Bajo, conversión UTC-5 y carga del histórico acumulado en SQL Server."
+                       data-en="Alto/Medio/Bajo risk classification, UTC-5 conversion and cumulative historical load into SQL Server.">
+                       Clasificación de riesgo Alto/Medio/Bajo, conversión UTC-5 y carga del histórico acumulado en SQL Server.
+                    </p>
+                </div>
+                <div class="featured-flow-arrow"><i class="bi bi-arrow-right"></i></div>
+                <div class="featured-flow-item">
+                    <div class="featured-flow-icon"><i class="bi bi-bar-chart-line"></i></div>
+                    <h5>Power BI</h5>
+                    <p data-es="Dashboard ejecutivo con mapa interactivo del corredor logístico, estado actual por ciudad e histórico de riesgo operacional."
+                       data-en="Executive dashboard with interactive logistics corridor map, current status per city and operational risk history.">
+                       Dashboard ejecutivo con mapa interactivo del corredor logístico, estado actual por ciudad e histórico de riesgo operacional.
+                    </p>
+                </div>
+            </div>
+
+            <div class="dashboard-gallery">
+                <h4 class="dashboard-gallery-title"
+                    data-es="Dashboard Power BI — Vista Previa"
+                    data-en="Power BI Dashboard — Preview">
+                    Dashboard Power BI — Vista Previa
+                </h4>
+                <div class="dashboard-grid dashboard-grid-2">
+                    <div class="dashboard-img-wrapper active">
+                        <img src="monitoreo_en_tiempo_real.png" alt="Monitoreo en Tiempo Real" loading="lazy">
+                        <span class="dashboard-img-label" data-es="Monitoreo en Tiempo Real" data-en="Real-Time Monitoring">Monitoreo en Tiempo Real</span>
+                    </div>
+                    <div class="dashboard-img-wrapper">
+                        <img src="analisis_historico.png" alt="Análisis Histórico" loading="lazy">
+                        <span class="dashboard-img-label" data-es="Análisis Histórico" data-en="Historical Analysis">Análisis Histórico</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="featured-insights">
+                <div class="insight-item">
+                    <i class="bi bi-geo-alt-fill insight-icon"></i>
+                    <p data-es="<strong>Buenaventura identificada como nodo crítico</strong> — único puerto con riesgo Alto en el corredor, humedad del 95% y lluvia ligera activa con viento de 2.77 km/h afectando operaciones portuarias."
+                       data-en="<strong>Buenaventura identified as critical node</strong> — only port with High risk in the corridor, 95% humidity and active light rain with 2.77 km/h wind affecting port operations.">
+                       <strong>Buenaventura identificada como nodo crítico</strong> — único puerto con riesgo Alto en el corredor, humedad del 95% y lluvia ligera activa con viento de 2.77 km/h afectando operaciones portuarias.
+                    </p>
+                </div>
+                <div class="insight-item">
+                    <i class="bi bi-pie-chart-fill insight-icon"></i>
+                    <p data-es="<strong>Distribución histórica de riesgo:</strong> 50% Bajo, 37.5% Medio y 12.5% Alto — el corredor opera en condiciones favorables la mayoría del tiempo, con ventanas operacionales predecibles."
+                       data-en="<strong>Historical risk distribution:</strong> 50% Low, 37.5% Medium and 12.5% High — the corridor operates under favorable conditions most of the time, with predictable operational windows.">
+                       <strong>Distribución histórica de riesgo:</strong> 50% Bajo, 37.5% Medio y 12.5% Alto — el corredor opera en condiciones favorables la mayoría del tiempo, con ventanas operacionales predecibles.
+                    </p>
+                </div>
+                <div class="insight-item">
+                    <i class="bi bi-thermometer-half insight-icon"></i>
+                    <p data-es="<strong>Cúcuta lidera en temperatura promedio (28°C)</strong> mientras Manizales presenta las condiciones más frías (10.5°C) — gradiente térmico de 17.5°C entre nodos define requerimientos logísticos diferenciados."
+                       data-en="<strong>Cúcuta leads in average temperature (28°C)</strong> while Manizales shows the coldest conditions (10.5°C) — 17.5°C thermal gradient between nodes defines differentiated logistics requirements.">
+                       <strong>Cúcuta lidera en temperatura promedio (28°C)</strong> mientras Manizales presenta las condiciones más frías (10.5°C) — gradiente térmico de 17.5°C entre nodos define requerimientos logísticos diferenciados.
+                    </p>
+                </div>
+            </div>
+
+            <div class="featured-footer">
+                <div class="featured-tech">
+                    <span class="featured-badge">Python</span>
+                    <span class="featured-badge">OpenWeatherMap API</span>
+                    <span class="featured-badge">SQL Server</span>
+                    <span class="featured-badge">Power BI</span>
+                    <span class="featured-badge">ETL Automatizado</span>
+                    <span class="featured-badge">Azure Maps</span>
+                </div>
+                <button class="btn btn-secondary px-4" disabled
+                    title="Repositorio en construcción — acumulando datos históricos">
+                    <i class="bi bi-github me-2"></i>
+                    <span data-es="Repositorio Próximamente" data-en="Repository Coming Soon">Repositorio Próximamente</span>
+                </button>
+            </div>
+
+        </div>
+
         <!-- TAB: ONLINE RETAIL II -->
-        <div class="featured-content active" id="tab-retail">
+        <div class="featured-content" id="tab-retail">
 
             <h2 class="featured-title" data-aos="fade-up"
                 data-es="Online Retail II — Análisis de Ventas & Segmentación RFM"
@@ -445,28 +566,28 @@
             </div>
 
             <div class="featured-insights">
-    <div class="insight-item">
-        <i class="bi bi-graph-up-arrow insight-icon"></i>
-        <p data-es="<strong>MAE de 6.26 frente a una media de 52 unidades</strong> — error relativo del 12%, con el 95% de las predicciones dentro de ±16.5 unidades. Precisión excepcional para planificación de inventario diario."
-           data-en="<strong>MAE of 6.26 vs a mean of 52 units</strong> — 12% relative error, with 95% of predictions within ±16.5 units. Exceptional accuracy for daily inventory planning.">
-           <strong>MAE de 6.26 frente a una media de 52 unidades</strong> — error relativo del 12%, con el 95% de las predicciones dentro de ±16.5 unidades. Precisión excepcional para planificación de inventario diario.
-        </p>
-    </div>
-    <div class="insight-item">
-        <i class="bi bi-exclamation-triangle-fill insight-icon warning"></i>
-        <p data-es="<strong>SKUs con alta volatilidad identificados</strong> requieren stock de seguridad superior al promedio — la estabilidad semanal de la demanda permite una logística de reposición lineal sin sesgos en fines de semana."
-           data-en="<strong>High-volatility SKUs identified</strong> require above-average safety stock — weekly demand stability enables linear replenishment logistics without weekend bias.">
-           <strong>SKUs con alta volatilidad identificados</strong> requieren stock de seguridad superior al promedio — la estabilidad semanal de la demanda permite una logística de reposición lineal sin sesgos en fines de semana.
-        </p>
-    </div>
-    <div class="insight-item">
-        <i class="bi bi-boxes insight-icon"></i>
-        <p data-es="<strong>Patrón de Pareto confirmado</strong> — alta concentración del volumen de ventas en un grupo selecto de tiendas y SKUs críticos, permitiendo priorizar el reabastecimiento donde el impacto operativo es mayor."
-           data-en="<strong>Pareto pattern confirmed</strong> — high sales volume concentration in a select group of critical stores and SKUs, enabling prioritized restocking where operational impact is highest.">
-           <strong>Patrón de Pareto confirmado</strong> — alta concentración del volumen de ventas en un grupo selecto de tiendas y SKUs críticos, permitiendo priorizar el reabastecimiento donde el impacto operativo es mayor.
-        </p>
-    </div>
-</div>X
+                <div class="insight-item">
+                    <i class="bi bi-graph-up-arrow insight-icon"></i>
+                    <p data-es="<strong>MAE de 6.26 frente a una media de 52 unidades</strong> — error relativo del 12%, con el 95% de las predicciones dentro de ±16.5 unidades. Precisión excepcional para planificación de inventario diario."
+                       data-en="<strong>MAE of 6.26 vs a mean of 52 units</strong> — 12% relative error, with 95% of predictions within ±16.5 units. Exceptional accuracy for daily inventory planning.">
+                       <strong>MAE de 6.26 frente a una media de 52 unidades</strong> — error relativo del 12%, con el 95% de las predicciones dentro de ±16.5 unidades. Precisión excepcional para planificación de inventario diario.
+                    </p>
+                </div>
+                <div class="insight-item">
+                    <i class="bi bi-exclamation-triangle-fill insight-icon warning"></i>
+                    <p data-es="<strong>SKUs con alta volatilidad identificados</strong> requieren stock de seguridad superior al promedio — la estabilidad semanal de la demanda permite una logística de reposición lineal sin sesgos en fines de semana."
+                       data-en="<strong>High-volatility SKUs identified</strong> require above-average safety stock — weekly demand stability enables linear replenishment logistics without weekend bias.">
+                       <strong>SKUs con alta volatilidad identificados</strong> requieren stock de seguridad superior al promedio — la estabilidad semanal de la demanda permite una logística de reposición lineal sin sesgos en fines de semana.
+                    </p>
+                </div>
+                <div class="insight-item">
+                    <i class="bi bi-boxes insight-icon"></i>
+                    <p data-es="<strong>Patrón de Pareto confirmado</strong> — alta concentración del volumen de ventas en un grupo selecto de tiendas y SKUs críticos, permitiendo priorizar el reabastecimiento donde el impacto operativo es mayor."
+                       data-en="<strong>Pareto pattern confirmed</strong> — high sales volume concentration in a select group of critical stores and SKUs, enabling prioritized restocking where operational impact is highest.">
+                       <strong>Patrón de Pareto confirmado</strong> — alta concentración del volumen de ventas en un grupo selecto de tiendas y SKUs críticos, permitiendo priorizar el reabastecimiento donde el impacto operativo es mayor.
+                    </p>
+                </div>
+            </div>
 
             <div class="featured-footer">
                 <div class="featured-tech">
@@ -816,6 +937,40 @@
                     </div>
                 </div>
             </div>
+
+            <div class="col-md-6 col-lg-4 project-item" data-category="logistica" data-aos="fade-up" data-aos-delay="100">
+    <div class="card project-card">
+        <div class="project-img-container">
+            <img src="automatizacion_col.png" alt="Pipeline Riesgo Climático" loading="lazy">
+            <div class="project-overlay-text">
+                <span class="project-overlay-label">Logística & Operaciones</span>
+                <p class="project-overlay-title">Pipeline ETL automatizado con API en tiempo real</p>
+            </div>
+        </div>
+        <div class="card-body d-flex flex-column text-center">
+            <h5 class="card-title fw-bold"
+                data-es="Pipeline de Riesgo Climático"
+                data-en="Climate Risk Pipeline">
+                Pipeline de Riesgo Climático
+            </h5>
+            <p class="card-text small text-muted flex-grow-1"
+                data-es="Pipeline ETL automatizado que monitorea en tiempo real 8 nodos logísticos de Colombia, clasificando el riesgo operacional por condiciones climáticas y alimentando un dashboard ejecutivo en Power BI."
+                data-en="Automated ETL pipeline monitoring 8 Colombian logistics nodes in real time, classifying operational risk by weather conditions and feeding an executive Power BI dashboard.">
+                Pipeline ETL automatizado que monitorea en tiempo real 8 nodos logísticos de Colombia, clasificando el riesgo operacional por condiciones climáticas y alimentando un dashboard ejecutivo en Power BI.
+            </p>
+            <div class="mb-3">
+                <span class="badge bg-light text-primary border border-primary">Python</span>
+                <span class="badge bg-light text-primary border border-primary">SQL Server</span>
+                <span class="badge bg-light text-primary border border-primary">Power BI</span>
+            </div>
+            <button class="btn btn-sm btn-outline-secondary mt-auto" disabled
+                title="Repositorio en construcción">
+                <i class="bi bi-github me-2"></i>
+                <span data-es="Próximamente" data-en="Coming Soon">Próximamente</span>
+            </button>
+        </div>
+    </div>
+</div>
 
             <div class="col-md-6 col-lg-4 project-item" data-category="marketing" data-aos="fade-up" data-aos-delay="200">
                 <div class="card project-card">

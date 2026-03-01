@@ -1362,3 +1362,9 @@ html, body {
 .featured-content.active {
     display: block;
 }
+
+.dashboard-grid.dashboard-grid-2 {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 700px;
+    margin: 0 auto;
+}
