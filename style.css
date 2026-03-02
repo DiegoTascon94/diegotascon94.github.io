@@ -1368,3 +1368,19 @@ html, body {
     max-width: 700px;
     margin: 0 auto;
 }
+
+@media (max-width: 768px) {
+    .featured-tabs {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+        width: 100%;
+    }
+
+    .featured-tab {
+        width: 80%;
+        text-align: center;
+        padding: 0.6rem 1rem;
+        font-size: 0.85rem;
+    }
+}
