@@ -87,7 +87,9 @@ document.addEventListener("DOMContentLoaded", () => {
     updateActiveNavLink();
 });
 
+// =============================================
 // DATA WIDGET: Reiniciar animaciones al hacer scroll
+// =============================================
 const dataWidget = document.querySelector('.data-widget');
 if (dataWidget) {
     const widgetObserver = new IntersectionObserver((entries) => {
@@ -95,7 +97,7 @@ if (dataWidget) {
             if (entry.isIntersecting) {
                 document.querySelectorAll('.chart-bar').forEach(bar => {
                     bar.style.animation = 'none';
-                    bar.offsetHeight; // fuerza reflow
+                    bar.offsetHeight;
                     bar.style.animation = '';
                 });
                 widgetObserver.unobserve(entry.target);
@@ -105,7 +107,13 @@ if (dataWidget) {
     widgetObserver.observe(dataWidget);
 }
 
+// =============================================
 // STATS BAR: Contador animado
+// =============================================
+const projectCount = document.querySelectorAll('.project-item').length;
+const statProjects = document.getElementById('stat-projects');
+if (statProjects) statProjects.setAttribute('data-target', projectCount);
+
 function animateCounters() {
     const counters = document.querySelectorAll(".stat-number");
 
@@ -138,19 +146,20 @@ function animateCounters() {
 
 animateCounters();
 
-// PARALLAX en Hero
+// =============================================
+// PARALLAX EN HERO
+// =============================================
 const masthead = document.querySelector('.masthead');
-const mastheadBefore = document.querySelector('.masthead::before');
-
 if (masthead) {
     window.addEventListener('scroll', () => {
-        const scrolled = window.scrollY;
-        const rate = scrolled * 0.4;
+        const rate = window.scrollY * 0.4;
         masthead.style.backgroundPositionY = `-${rate}px`;
     }, { passive: true });
 }
 
-// PARTÍCULAS en Hero
+// =============================================
+// PARTÍCULAS EN HERO
+// =============================================
 if (typeof tsParticles !== "undefined") {
     tsParticles.load("particles-hero", {
         fpsLimit: 30,
@@ -193,27 +202,24 @@ if (typeof tsParticles !== "undefined") {
         },
         interactivity: {
             events: {
-                onHover: {
-                    enable: false
-                }
+                onHover: { enable: false }
             }
         },
         detectRetina: false
     });
 }
 
+// =============================================
 // FILTRO DE PROYECTOS
-const filterBtns = document.querySelectorAll('.filter-btn');
-const projectItems = document.querySelectorAll('.project-item');
-
-filterBtns.forEach(btn => {
+// =============================================
+document.querySelectorAll('.filter-btn').forEach(btn => {
     btn.addEventListener('click', () => {
-        filterBtns.forEach(b => b.classList.remove('active'));
+        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
 
         const filter = btn.getAttribute('data-filter');
 
-        projectItems.forEach(item => {
+        document.querySelectorAll('.project-item').forEach(item => {
             if (filter === 'all' || item.getAttribute('data-category') === filter) {
                 item.classList.remove('hidden');
             } else {
@@ -223,50 +229,48 @@ filterBtns.forEach(btn => {
     });
 });
 
+// =============================================
 // TABS DE HABILIDADES
-const skillsTabs = document.querySelectorAll('.skills-tab');
-const tabContents = document.querySelectorAll('.tab-content');
-
-skillsTabs.forEach(tab => {
+// =============================================
+document.querySelectorAll('.skills-tab').forEach(tab => {
     tab.addEventListener('click', () => {
-        skillsTabs.forEach(t => t.classList.remove('active'));
-        tabContents.forEach(c => c.classList.remove('active'));
+        document.querySelectorAll('.skills-tab').forEach(t => t.classList.remove('active'));
+        document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
         tab.classList.add('active');
         document.getElementById('tab-' + tab.getAttribute('data-tab')).classList.add('active');
+        if (typeof AOS !== "undefined") AOS.refresh();
     });
 });
 
+// =============================================
 // TABS DE FORMACIÓN
-const formationTabs = document.querySelectorAll('.formation-tab');
-const formationContents = document.querySelectorAll('.formation-content');
-
-formationTabs.forEach(tab => {
+// =============================================
+document.querySelectorAll('.formation-tab').forEach(tab => {
     tab.addEventListener('click', () => {
-        formationTabs.forEach(t => t.classList.remove('active'));
-        formationContents.forEach(c => c.classList.remove('active'));
+        document.querySelectorAll('.formation-tab').forEach(t => t.classList.remove('active'));
+        document.querySelectorAll('.formation-content').forEach(c => c.classList.remove('active'));
         tab.classList.add('active');
         document.getElementById('tab-' + tab.getAttribute('data-tab')).classList.add('active');
+        if (typeof AOS !== "undefined") AOS.refresh();
     });
 });
 
+// =============================================
 // TABS DE FEATURED PROJECTS
-const featuredTabs = document.querySelectorAll('.featured-tab');
-const featuredContents = document.querySelectorAll('.featured-content');
-
-featuredTabs.forEach(tab => {
+// =============================================
+document.querySelectorAll('.featured-tab').forEach(tab => {
     tab.addEventListener('click', () => {
-        featuredTabs.forEach(t => t.classList.remove('active'));
-        featuredContents.forEach(c => c.classList.remove('active'));
+        document.querySelectorAll('.featured-tab').forEach(t => t.classList.remove('active'));
+        document.querySelectorAll('.featured-content').forEach(c => c.classList.remove('active'));
         tab.classList.add('active');
         document.getElementById('tab-' + tab.getAttribute('data-tab')).classList.add('active');
+        if (typeof AOS !== "undefined") AOS.refresh();
     });
 });
 
-const projectCount = document.querySelectorAll('.project-item').length;
-const statProjects = document.getElementById('stat-projects');
-if (statProjects) statProjects.setAttribute('data-target', projectCount);
-
+// =============================================
 // CARRUSEL CON SWIPE TÁCTIL
+// =============================================
 document.querySelectorAll('.dashboard-carousel').forEach(carousel => {
     const track = carousel.querySelector('.dashboard-carousel-track');
     const slides = carousel.querySelectorAll('.dashboard-carousel-slide');
@@ -301,6 +305,4 @@ document.querySelectorAll('.dashboard-carousel').forEach(carousel => {
 // =============================================
 // EVENTOS DE SCROLL
 // =============================================
-window.addEventListener("scroll", () => {
-    updateActiveNavLink();
-});
+window.addEventListener("scroll", updateActiveNavLink);
