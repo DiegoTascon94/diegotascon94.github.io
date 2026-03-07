@@ -330,14 +330,18 @@
                     data-en="Power BI Dashboard — Preview">
                     Dashboard Power BI — Vista Previa
                 </h4>
-                <div class="dashboard-grid dashboard-grid-2">
+                <div class="dashboard-grid">
                     <div class="dashboard-img-wrapper active">
-                        <img src="monitoreo_en_tiempo_real.png" alt="Monitoreo en Tiempo Real" loading="lazy">
+                        <img src="1_monitoreo_tiempo_real.png" alt="Monitoreo en Tiempo Real" loading="lazy">
                         <span class="dashboard-img-label" data-es="Monitoreo en Tiempo Real" data-en="Real-Time Monitoring">Monitoreo en Tiempo Real</span>
                     </div>
                     <div class="dashboard-img-wrapper">
-                        <img src="analisis_historico.png" alt="Análisis Histórico" loading="lazy">
+                        <img src="2_analisis_hitorico.png" alt="Análisis Histórico" loading="lazy">
                         <span class="dashboard-img-label" data-es="Análisis Histórico" data-en="Historical Analysis">Análisis Histórico</span>
+                    </div>
+                    <div class="dashboard-img-wrapper">
+                        <img src="seleccion_cali.png" alt="Selección Ciudad — Santiago de Cali" loading="lazy">
+                        <span class="dashboard-img-label" data-es="Filtro por Ciudad" data-en="City Filter">Filtro por Ciudad</span>
                     </div>
                 </div>
             </div>
@@ -345,23 +349,23 @@
             <div class="featured-insights">
                 <div class="insight-item">
                     <i class="bi bi-geo-alt-fill insight-icon"></i>
-                    <p data-es="<strong>Buenaventura identificada como nodo crítico</strong> — único puerto con riesgo Alto en el corredor, humedad del 95% y lluvia ligera activa con viento de 2.77 km/h afectando operaciones portuarias."
-                       data-en="<strong>Buenaventura identified as critical node</strong> — only port with High risk in the corridor, 95% humidity and active light rain with 2.77 km/h wind affecting port operations.">
-                       <strong>Buenaventura identificada como nodo crítico</strong> — único puerto con riesgo Alto en el corredor, humedad del 95% y lluvia ligera activa con viento de 2.77 km/h afectando operaciones portuarias.
+                    <p data-es="<strong>Santiago de Cali identificada como nodo de atención</strong> — única ciudad en riesgo Medio del corredor con temperatura de 30°C, humedad del 88% y nubes dispersas afectando las operaciones logísticas del suroccidente colombiano."
+                    data-en="<strong>Santiago de Cali identified as attention node</strong> — only city at Medium risk in the corridor with 30°C temperature, 88% humidity and scattered clouds affecting logistics operations in southwestern Colombia.">
+                    <strong>Santiago de Cali identificada como nodo de atención</strong> — única ciudad en riesgo Medio del corredor con temperatura de 30°C, humedad del 88% y nubes dispersas afectando las operaciones logísticas del suroccidente colombiano.
                     </p>
                 </div>
                 <div class="insight-item">
                     <i class="bi bi-pie-chart-fill insight-icon"></i>
-                    <p data-es="<strong>Distribución histórica de riesgo:</strong> 50% Bajo, 37.5% Medio y 12.5% Alto — el corredor opera en condiciones favorables la mayoría del tiempo, con ventanas operacionales predecibles."
-                       data-en="<strong>Historical risk distribution:</strong> 50% Low, 37.5% Medium and 12.5% High — the corridor operates under favorable conditions most of the time, with predictable operational windows.">
-                       <strong>Distribución histórica de riesgo:</strong> 50% Bajo, 37.5% Medio y 12.5% Alto — el corredor opera en condiciones favorables la mayoría del tiempo, con ventanas operacionales predecibles.
+                    <p data-es="<strong>Distribución histórica de riesgo consolidada:</strong> 76.47% Bajo, 19.85% Medio y 3.68% Alto — con mayor acumulación de datos el corredor demuestra alta estabilidad operacional, con condiciones adversas representando menos del 4% del tiempo monitoreado."
+                    data-en="<strong>Consolidated historical risk distribution:</strong> 76.47% Low, 19.85% Medium and 3.68% High — with more accumulated data the corridor demonstrates high operational stability, with adverse conditions representing less than 4% of monitored time.">
+                    <strong>Distribución histórica de riesgo consolidada:</strong> 76.47% Bajo, 19.85% Medio y 3.68% Alto — con mayor acumulación de datos el corredor demuestra alta estabilidad operacional, con condiciones adversas representando menos del 4% del tiempo monitoreado.
                     </p>
                 </div>
                 <div class="insight-item">
                     <i class="bi bi-thermometer-half insight-icon"></i>
-                    <p data-es="<strong>Cúcuta lidera en temperatura promedio (28°C)</strong> mientras Manizales presenta las condiciones más frías (10.5°C) — gradiente térmico de 17.5°C entre nodos define requerimientos logísticos diferenciados."
-                       data-en="<strong>Cúcuta leads in average temperature (28°C)</strong> while Manizales shows the coldest conditions (10.5°C) — 17.5°C thermal gradient between nodes defines differentiated logistics requirements.">
-                       <strong>Cúcuta lidera en temperatura promedio (28°C)</strong> mientras Manizales presenta las condiciones más frías (10.5°C) — gradiente térmico de 17.5°C entre nodos define requerimientos logísticos diferenciados.
+                    <p data-es="<strong>Cartagena lidera en temperatura promedio (29.8°C)</strong> mientras Manizales presenta las condiciones más frías (15.2°C) — gradiente térmico de 14.6°C entre nodos define requerimientos logísticos diferenciados por corredor."
+                    data-en="<strong>Cartagena leads in average temperature (29.8°C)</strong> while Manizales shows the coldest conditions (15.2°C) — 14.6°C thermal gradient between nodes defines differentiated logistics requirements per corridor.">
+                    <strong>Cartagena lidera en temperatura promedio (29.8°C)</strong> mientras Manizales presenta las condiciones más frías (15.2°C) — gradiente térmico de 14.6°C entre nodos define requerimientos logísticos diferenciados por corredor.
                     </p>
                 </div>
             </div>
@@ -375,11 +379,10 @@
                     <span class="featured-badge">ETL Automatizado</span>
                     <span class="featured-badge">Azure Maps</span>
                 </div>
-                <button class="btn btn-secondary px-4" disabled
-                    title="Repositorio en construcción — acumulando datos históricos">
-                    <i class="bi bi-github me-2"></i>
-                    <span data-es="Repositorio Próximamente" data-en="Repository Coming Soon">Repositorio Próximamente</span>
-                </button>
+                <a href="https://github.com/DiegoTascon94/logistics-weather-pipeline.git" target="_blank" class="btn btn-primary px-4"
+                    data-es="Ver Repositorio Completo" data-en="View Full Repository">
+                        <i class="bi bi-github me-2"></i>Ver Repositorio Completo
+                    </a>
             </div>
 
         </div>
@@ -932,13 +935,10 @@
                             <span class="badge bg-light text-primary border border-primary">Python</span>
                             <span class="badge bg-light text-primary border border-primary">SQL Server</span>
                             <span class="badge bg-light text-primary border border-primary">Power BI</span>
+                        </div>                        
+                            <a href="https://github.com/DiegoTascon94/logistics-weather-pipeline.git" target="_blank" class="btn btn-sm btn-outline-primary mt-auto"
+                            data-es="Ver Repositorio" data-en="View Repository">Ver Repositorio</a>
                         </div>
-                        <button class="btn btn-sm btn-outline-secondary mt-auto" disabled
-                            title="Repositorio en construcción">
-                            <i class="bi bi-github me-2"></i>
-                            <span data-es="Próximamente" data-en="Coming Soon">Próximamente</span>
-                        </button>
-                    </div>
                 </div>
             </div>
 
