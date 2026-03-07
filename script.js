@@ -266,6 +266,38 @@ const projectCount = document.querySelectorAll('.project-item').length;
 const statProjects = document.getElementById('stat-projects');
 if (statProjects) statProjects.setAttribute('data-target', projectCount);
 
+// CARRUSEL CON SWIPE TÁCTIL
+document.querySelectorAll('.dashboard-carousel').forEach(carousel => {
+    const track = carousel.querySelector('.dashboard-carousel-track');
+    const slides = carousel.querySelectorAll('.dashboard-carousel-slide');
+    const dots = carousel.querySelectorAll('.dashboard-carousel-dot');
+    let current = 0;
+    let startX = 0;
+    let isDragging = false;
+
+    function goTo(index) {
+        current = (index + slides.length) % slides.length;
+        track.style.transform = `translateX(-${current * 100}%)`;
+        dots.forEach(d => d.classList.remove('active'));
+        if (dots[current]) dots[current].classList.add('active');
+    }
+
+    carousel.addEventListener('touchstart', e => {
+        startX = e.touches[0].clientX;
+        isDragging = true;
+    }, { passive: true });
+
+    carousel.addEventListener('touchend', e => {
+        if (!isDragging) return;
+        const diff = startX - e.changedTouches[0].clientX;
+        if (Math.abs(diff) > 50) goTo(diff > 0 ? current + 1 : current - 1);
+        isDragging = false;
+    });
+
+    dots.forEach((dot, i) => dot.addEventListener('click', () => goTo(i)));
+    goTo(0);
+});
+
 // =============================================
 // EVENTOS DE SCROLL
 // =============================================
