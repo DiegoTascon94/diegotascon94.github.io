@@ -1312,6 +1312,48 @@ body {
     margin: 0;
 }
 
+@media (max-width: 768px) {
+    .featured-footer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .featured-tech {
+        justify-content: center;
+    }
+
+    .featured-badge {
+        font-size: 0.78rem;
+        padding: 0.25rem 0.65rem;
+    }
+
+    .featured-footer .btn {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .featured-footer {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .featured-tech {
+        justify-content: center;
+        gap: 0.4rem;
+    }
+
+    .featured-badge {
+        font-size: 0.72rem;
+        padding: 0.2rem 0.55rem;
+    }
+
+    .featured-footer .btn {
+        width: 100%;
+    }
+}
+
 /* =============================================
    CONTACTO / CTA
    ============================================= */
