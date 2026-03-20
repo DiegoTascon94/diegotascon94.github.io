@@ -210,7 +210,7 @@ if (typeof tsParticles !== "undefined") {
 }
 
 // =============================================
-// FILTRO DE PROYECTOS
+// FILTRO DE PROYECTOS (soporta multi-categoría)
 // =============================================
 document.querySelectorAll('.filter-btn').forEach(btn => {
     btn.addEventListener('click', () => {
@@ -220,7 +220,8 @@ document.querySelectorAll('.filter-btn').forEach(btn => {
         const filter = btn.getAttribute('data-filter');
 
         document.querySelectorAll('.project-item').forEach(item => {
-            if (filter === 'all' || item.getAttribute('data-category') === filter) {
+            const categories = item.getAttribute('data-category').split(' ');
+            if (filter === 'all' || categories.includes(filter)) {
                 item.classList.remove('hidden');
             } else {
                 item.classList.add('hidden');
