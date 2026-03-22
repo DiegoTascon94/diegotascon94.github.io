@@ -572,12 +572,22 @@ body {
 }
 
 .featured-content {
-    display: none;
+    opacity: 0;
+    visibility: hidden;
+    height: 0;
+    overflow: hidden;
+    transition: opacity 0.35s ease, transform 0.35s ease;
+    transform: translateY(12px);
 }
 
 .featured-content.active {
-    display: block;
+    opacity: 1;
+    visibility: visible;
+    height: auto;
+    overflow: visible;
+    transform: translateY(0);
 }
+
 
 @media (max-width: 768px) {
     .featured-tabs {
@@ -1337,10 +1347,74 @@ body {
 }
 
 /* =============================================
-   CONTACTO / CTA
+   CONTACTO — REDISEÑADO
    ============================================= */
 .cta-contact {
-    background: var(--color-principal);
-    color: white;
+    background: linear-gradient(160deg, #0F172A 0%, #1e293b 60%, #0F172A 100%);
     padding: 5rem 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-contact::before {
+    content: '';
+    position: absolute;
+    bottom: -30%;
+    right: -10%;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(37, 99, 235, 0.07) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.cta-contact .d-flex {
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    justify-content: center;
+    gap: 1rem !important;
+}
+
+.cta-contact .btn {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    background: rgba(255, 255, 255, 0.03) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-radius: 12px !important;
+    padding: 0.85rem 1.6rem !important;
+    color: #CBD5E1 !important;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: all 0.3s ease !important;
+    box-shadow: none !important;
+    text-decoration: none;
+}
+
+.cta-contact .btn:hover {
+    background: rgba(37, 99, 235, 0.1) !important;
+    border-color: rgba(37, 99, 235, 0.4) !important;
+    color: #ffffff !important;
+    transform: translateY(-3px);
+}
+
+.cta-contact .btn i {
+    font-size: 1.1rem;
+}
+
+.cta-contact .btn-primary {
+    background: rgba(37, 99, 235, 0.15) !important;
+    border-color: rgba(37, 99, 235, 0.4) !important;
+    color: #93C5FD !important;
+}
+
+.cta-contact .btn-primary:hover {
+    background: rgba(37, 99, 235, 0.3) !important;
+    border-color: #2563EB !important;
+    color: #ffffff !important;
+}
+
+@media (max-width: 576px) {
+    .cta-contact .d-flex {
+        flex-wrap: wrap !important;
+    }
 }

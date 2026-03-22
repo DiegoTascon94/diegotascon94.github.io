@@ -151,9 +151,19 @@ animateCounters();
 // =============================================
 const masthead = document.querySelector('.masthead');
 if (masthead) {
+    let ticking = false;
+    const isMobile = () => window.innerWidth <= 768;
+
     window.addEventListener('scroll', () => {
-        const rate = window.scrollY * 0.4;
-        masthead.style.backgroundPositionY = `-${rate}px`;
+        if (isMobile()) return;
+        if (!ticking) {
+            requestAnimationFrame(() => {
+                const rate = window.scrollY * 0.4;
+                masthead.style.backgroundPositionY = `-${rate}px`;
+                ticking = false;
+            });
+            ticking = true;
+        }
     }, { passive: true });
 }
 
