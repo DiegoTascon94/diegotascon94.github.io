@@ -26,6 +26,7 @@ function typeWriterEffect(element, text) {
 // =============================================
 function toggleLanguage() {
     currentLang = currentLang === "es" ? "en" : "es";
+    document.documentElement.lang = currentLang;
 
     document.querySelectorAll("[data-es]").forEach(el => {
         const newText = el.getAttribute(`data-${currentLang}`);
@@ -33,6 +34,8 @@ function toggleLanguage() {
 
         if (el.classList.contains("header-title-sub")) {
             typeWriterEffect(el, newText);
+        } else if (newText.includes('<')) {
+            el.innerHTML = newText;
         } else {
             el.textContent = newText;
         }
@@ -241,43 +244,23 @@ document.querySelectorAll('.filter-btn').forEach(btn => {
 });
 
 // =============================================
-// TABS DE HABILIDADES
+// TABS (habilidades, formación, featured)
 // =============================================
-document.querySelectorAll('.skills-tab').forEach(tab => {
-    tab.addEventListener('click', () => {
-        document.querySelectorAll('.skills-tab').forEach(t => t.classList.remove('active'));
-        document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
-        tab.classList.add('active');
-        document.getElementById('tab-' + tab.getAttribute('data-tab')).classList.add('active');
-        if (typeof AOS !== "undefined") AOS.refresh();
+function initTabs(tabSelector, contentSelector) {
+    document.querySelectorAll(tabSelector).forEach(tab => {
+        tab.addEventListener('click', () => {
+            document.querySelectorAll(tabSelector).forEach(t => t.classList.remove('active'));
+            document.querySelectorAll(contentSelector).forEach(c => c.classList.remove('active'));
+            tab.classList.add('active');
+            document.getElementById('tab-' + tab.getAttribute('data-tab')).classList.add('active');
+            if (typeof AOS !== "undefined") AOS.refresh();
+        });
     });
-});
+}
 
-// =============================================
-// TABS DE FORMACIÓN
-// =============================================
-document.querySelectorAll('.formation-tab').forEach(tab => {
-    tab.addEventListener('click', () => {
-        document.querySelectorAll('.formation-tab').forEach(t => t.classList.remove('active'));
-        document.querySelectorAll('.formation-content').forEach(c => c.classList.remove('active'));
-        tab.classList.add('active');
-        document.getElementById('tab-' + tab.getAttribute('data-tab')).classList.add('active');
-        if (typeof AOS !== "undefined") AOS.refresh();
-    });
-});
-
-// =============================================
-// TABS DE FEATURED PROJECTS
-// =============================================
-document.querySelectorAll('.featured-tab').forEach(tab => {
-    tab.addEventListener('click', () => {
-        document.querySelectorAll('.featured-tab').forEach(t => t.classList.remove('active'));
-        document.querySelectorAll('.featured-content').forEach(c => c.classList.remove('active'));
-        tab.classList.add('active');
-        document.getElementById('tab-' + tab.getAttribute('data-tab')).classList.add('active');
-        if (typeof AOS !== "undefined") AOS.refresh();
-    });
-});
+initTabs('.skills-tab', '.tab-content');
+initTabs('.formation-tab', '.formation-content');
+initTabs('.featured-tab', '.featured-content');
 
 // =============================================
 // CARRUSEL CON SWIPE TÁCTIL
