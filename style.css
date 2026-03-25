@@ -101,6 +101,7 @@ body {
    ============================================= */
 .page-section {
     padding: 5rem 0;
+    overflow-x: hidden;
 }
 
 .section-title {
@@ -983,6 +984,7 @@ body {
     justify-content: center;
     gap: 0.6rem;
     margin-bottom: 0.5rem;
+    flex-wrap: wrap;
 }
 
 .skills-tab {
