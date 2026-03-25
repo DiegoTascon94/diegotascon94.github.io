@@ -175,38 +175,38 @@ if (masthead) {
 // =============================================
 if (typeof tsParticles !== "undefined") {
     tsParticles.load("particles-hero", {
-        fpsLimit: 30,
+        fpsLimit: 40,
         particles: {
             number: {
-                value: 30,
-                density: { enable: true, area: 800 }
+                value: 70,
+                density: { enable: true, area: 900 }
             },
             color: { value: "#2563EB" },
             shape: { type: "circle" },
             opacity: {
-                value: 0.25,
+                value: 0.4,
                 random: true,
                 animation: {
                     enable: true,
-                    speed: 0.5,
-                    minimumValue: 0.1,
+                    speed: 0.6,
+                    minimumValue: 0.15,
                     sync: false
                 }
             },
             size: {
-                value: { min: 1, max: 2 },
+                value: { min: 1, max: 3 },
                 random: true
             },
             links: {
                 enable: true,
-                distance: 120,
+                distance: 140,
                 color: "#2563EB",
-                opacity: 0.1,
+                opacity: 0.18,
                 width: 1
             },
             move: {
                 enable: true,
-                speed: 0.5,
+                speed: 0.6,
                 direction: "none",
                 random: true,
                 straight: false,
@@ -215,7 +215,13 @@ if (typeof tsParticles !== "undefined") {
         },
         interactivity: {
             events: {
-                onHover: { enable: false }
+                onHover: { enable: true, mode: "grab" }
+            },
+            modes: {
+                grab: {
+                    distance: 160,
+                    links: { opacity: 0.4 }
+                }
             }
         },
         detectRetina: false
