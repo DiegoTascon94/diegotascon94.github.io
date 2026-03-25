@@ -243,182 +243,27 @@
              2 proyectos destacados
         ============================== -->
         <div class="featured-tabs" data-aos="fade-up" data-aos-delay="100">
-            <button class="featured-tab active" data-tab="clima"
+            <button class="featured-tab active" data-tab="retailrocket"
+                data-es="Funnel & Conversion" data-en="Funnel & Conversion">Funnel & Conversion</button>
+            <button class="featured-tab" data-tab="clima"
                 data-es="Pipeline Riesgo Climático" data-en="Climate Risk Pipeline">Pipeline Riesgo Climático</button>
-            <button class="featured-tab" data-tab="retailrocket"
-                data-es="Retail Rocket" data-en="Retail Rocket">Retail Rocket</button>
         </div>
 
         <!-- ==============================
-             TAB 1: PIPELINE RIESGO CLIMÁTICO
-             Pipeline ETL en tiempo real
-             Stack: Python → SQL Server → Power BI
-             Diferenciador: APIs + automatización + contexto colombiano
+             TAB 1: FUNNEL & CONVERSION (E-commerce Intelligence)
+             Análisis end-to-end de conversión — DISEÑO HERO
+             Stack: Python → SQLite → Power BI
         ============================== -->
-        <div class="featured-content active" id="tab-clima">
+        <div class="featured-content active" id="tab-retailrocket">
 
             <h2 class="featured-title" data-aos="fade-up"
-                data-es="Pipeline de Riesgo Climático — Corredor Logístico Colombia"
-                data-en="Climate Risk Pipeline — Colombia Logistics Corridor">
-                Pipeline de Riesgo Climático — Corredor Logístico Colombia
+                data-es="E-commerce Funnel & Conversion Intelligence"
+                data-en="E-commerce Funnel & Conversion Intelligence">
+                E-commerce Funnel &amp; Conversion Intelligence
             </h2>
 
-            <p class="featured-subtitle" data-aos="fade-up" data-aos-delay="100"
-                data-es="Pipeline ETL automatizado que consume datos climáticos en tiempo real desde OpenWeatherMap, clasifica el riesgo operacional de 8 nodos logísticos clave de Colombia y alimenta un dashboard ejecutivo en Power BI."
-                data-en="Automated ETL pipeline consuming real-time climate data from OpenWeatherMap, classifying operational risk across 8 key Colombian logistics nodes and feeding an executive Power BI dashboard.">
-                Pipeline ETL automatizado que consume datos climáticos en tiempo real desde OpenWeatherMap, clasifica el riesgo operacional de 8 nodos logísticos clave de Colombia y alimenta un dashboard ejecutivo en Power BI.
-            </p>
-
             <!-- MÉTRICAS CLAVE -->
-            <div class="featured-metrics">
-                <div class="featured-metric">
-                    <span class="featured-metric-value">8</span>
-                    <span class="featured-metric-label" data-es="Nodos Logísticos Monitoreados" data-en="Logistics Nodes Monitored">Nodos Logísticos Monitoreados</span>
-                </div>
-                <div class="featured-metric">
-                    <span class="featured-metric-value">1h</span>
-                    <span class="featured-metric-label" data-es="Frecuencia de Actualización" data-en="Update Frequency">Frecuencia de Actualización</span>
-                </div>
-                <div class="featured-metric">
-                    <span class="featured-metric-value">RT</span>
-                    <span class="featured-metric-label" data-es="Datos en Tiempo Real" data-en="Real-Time Data">Datos en Tiempo Real</span>
-                </div>
-            </div>
-
-            <!-- FLUJO TÉCNICO: API → TRANSFORM → POWER BI -->
-            <div class="featured-flow">
-                <div class="featured-flow-item">
-                    <div class="featured-flow-icon"><i class="bi bi-cloud-rain"></i></div>
-                    <h5>API Extract</h5>
-                    <p data-es="Extracción automática cada hora desde OpenWeatherMap — temperatura, humedad, visibilidad, viento y condición climática por ciudad."
-                       data-en="Automatic hourly extraction from OpenWeatherMap — temperature, humidity, visibility, wind and weather condition per city.">
-                       Extracción automática cada hora desde OpenWeatherMap — temperatura, humedad, visibilidad, viento y condición climática por ciudad.
-                    </p>
-                </div>
-                <div class="featured-flow-arrow"><i class="bi bi-arrow-right"></i></div>
-                <div class="featured-flow-item">
-                    <div class="featured-flow-icon"><i class="bi bi-server"></i></div>
-                    <h5>Transform & Load</h5>
-                    <p data-es="Clasificación de riesgo Alto/Medio/Bajo, conversión UTC-5 y carga del histórico acumulado en SQL Server."
-                       data-en="Alto/Medio/Bajo risk classification, UTC-5 conversion and cumulative historical load into SQL Server.">
-                       Clasificación de riesgo Alto/Medio/Bajo, conversión UTC-5 y carga del histórico acumulado en SQL Server.
-                    </p>
-                </div>
-                <div class="featured-flow-arrow"><i class="bi bi-arrow-right"></i></div>
-                <div class="featured-flow-item">
-                    <div class="featured-flow-icon"><i class="bi bi-bar-chart-line"></i></div>
-                    <h5>Power BI</h5>
-                    <p data-es="Dashboard ejecutivo con mapa interactivo del corredor logístico, estado actual por ciudad e histórico de riesgo operacional."
-                       data-en="Executive dashboard with interactive logistics corridor map, current status per city and operational risk history.">
-                       Dashboard ejecutivo con mapa interactivo del corredor logístico, estado actual por ciudad e histórico de riesgo operacional.
-                    </p>
-                </div>
-            </div>
-
-            <!-- LAYOUT 2 COLUMNAS: CARRUSEL + INSIGHTS -->
-            <div class="row g-4 align-items-start mt-2">
-
-                <!-- COLUMNA IZQUIERDA: CARRUSEL DASHBOARD (3 capturas) -->
-                <div class="col-md-6">
-                    <div class="dashboard-gallery">
-                        <h4 class="dashboard-gallery-title"
-                            data-es="Dashboard Power BI — Vista Previa"
-                            data-en="Power BI Dashboard — Preview">
-                            Dashboard Power BI — Vista Previa
-                        </h4>
-                        <div class="dashboard-carousel">
-                            <div class="dashboard-carousel-track">
-                                <div class="dashboard-carousel-slide">
-                                    <img src="1_monitoreo_tiempo_real.png" alt="Monitoreo en Tiempo Real" loading="lazy">
-                                    <span class="dashboard-carousel-label">Monitoreo en Tiempo Real</span>
-                                </div>
-                                <div class="dashboard-carousel-slide">
-                                    <img src="2_analisis_historico.png" alt="Análisis Histórico" loading="lazy">
-                                    <span class="dashboard-carousel-label">Análisis Histórico</span>
-                                </div>
-                                <div class="dashboard-carousel-slide">
-                                    <img src="3_seleccion_cali.png" alt="Selección por Ciudad" loading="lazy">
-                                    <span class="dashboard-carousel-label">Selección por Ciudad</span>
-                                </div>
-                            </div>
-                            <div class="dashboard-carousel-dots">
-                                <div class="dashboard-carousel-dot active"></div>
-                                <div class="dashboard-carousel-dot"></div>
-                                <div class="dashboard-carousel-dot"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- COLUMNA DERECHA: INSIGHTS DE NEGOCIO -->
-                <div class="col-md-6">
-                    <div class="featured-insights" style="margin-top: 2.8rem;">
-                        <div class="insight-item">
-                            <i class="bi bi-geo-alt-fill insight-icon"></i>
-                            <p data-es="<strong>Santiago de Cali identificada como nodo de atención</strong> — única ciudad en riesgo Medio del corredor con temperatura de 30°C, humedad del 88% y nubes dispersas afectando las operaciones logísticas del suroccidente colombiano."
-                               data-en="<strong>Santiago de Cali identified as attention node</strong> — only city at Medium risk in the corridor with 30°C temperature, 88% humidity and scattered clouds affecting logistics operations in southwestern Colombia.">
-                               <strong>Santiago de Cali identificada como nodo de atención</strong> — única ciudad en riesgo Medio del corredor con temperatura de 30°C, humedad del 88% y nubes dispersas afectando las operaciones logísticas del suroccidente colombiano.
-                            </p>
-                        </div>
-                        <div class="insight-item">
-                            <i class="bi bi-pie-chart-fill insight-icon"></i>
-                            <p data-es="<strong>Distribución histórica de riesgo consolidada:</strong> 76.47% Bajo, 19.85% Medio y 3.68% Alto — con mayor acumulación de datos el corredor demuestra alta estabilidad operacional, con condiciones adversas representando menos del 4% del tiempo monitoreado."
-                               data-en="<strong>Consolidated historical risk distribution:</strong> 76.47% Low, 19.85% Medium and 3.68% High — with more accumulated data the corridor demonstrates high operational stability, with adverse conditions representing less than 4% of monitored time.">
-                               <strong>Distribución histórica de riesgo consolidada:</strong> 76.47% Bajo, 19.85% Medio y 3.68% Alto — con mayor acumulación de datos el corredor demuestra alta estabilidad operacional, con condiciones adversas representando menos del 4% del tiempo monitoreado.
-                            </p>
-                        </div>
-                        <div class="insight-item">
-                            <i class="bi bi-thermometer-half insight-icon"></i>
-                            <p data-es="<strong>Cartagena lidera en temperatura promedio (29.8°C)</strong> mientras Manizales presenta las condiciones más frías (15.2°C) — gradiente térmico de 14.6°C entre nodos define requerimientos logísticos diferenciados por corredor."
-                               data-en="<strong>Cartagena leads in average temperature (29.8°C)</strong> while Manizales shows the coldest conditions (15.2°C) — 14.6°C thermal gradient between nodes defines differentiated logistics requirements per corridor.">
-                               <strong>Cartagena lidera en temperatura promedio (29.8°C)</strong> mientras Manizales presenta las condiciones más frías (15.2°C) — gradiente térmico de 14.6°C entre nodos define requerimientos logísticos diferenciados por corredor.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-            <!-- FOOTER: BADGES TECNOLÓGICOS + BOTÓN REPOSITORIO -->
-            <div class="featured-footer">
-                <div class="featured-tech">
-                    <span class="featured-badge">Python</span>
-                    <span class="featured-badge">OpenWeatherMap API</span>
-                    <span class="featured-badge">SQL Server</span>
-                    <span class="featured-badge">Power BI</span>
-                    <span class="featured-badge">ETL Automatizado</span>
-                    <span class="featured-badge">Azure Maps</span>
-                </div>
-                <a href="https://github.com/DiegoTascon94/logistics-weather-pipeline.git" target="_blank" rel="noopener noreferrer" class="btn btn-primary px-4">
-                    <i class="bi bi-github me-2"></i>Ver Repositorio Completo
-                </a>
-            </div>
-
-        </div>
-        <!-- FIN TAB 1: PIPELINE RIESGO CLIMÁTICO -->
-
-        <!-- ==============================
-             TAB 2: RETAIL ROCKET
-             Análisis end-to-end de conversión
-             Stack: Python → SQLite → Power BI
-             Diferenciador: 2.7M+ eventos, K-Means + RF, funnel completo
-        ============================== -->
-        <div class="featured-content" id="tab-retailrocket">
-
-            <h2 class="featured-title"
-                data-es="E-commerce Funnel & Conversion Intelligence — Retail Rocket"
-                data-en="E-commerce Funnel & Conversion Intelligence — Retail Rocket">
-                E-commerce Funnel & Conversion Intelligence — Retail Rocket
-            </h2>
-
-            <p class="featured-subtitle"
-                data-es="Análisis end-to-end sobre 2.7M+ eventos de comportamiento de usuarios — desde funnel de conversión hasta modelo predictivo Random Forest con AUC-ROC 0.99 y dashboard ejecutivo de 5 vistas en Power BI."
-                data-en="End-to-end analysis of 2.7M+ user behavior events — from conversion funnel to Random Forest predictive model with AUC-ROC 0.99 and 5-view executive Power BI dashboard.">
-                Análisis end-to-end sobre 2.7M+ eventos de comportamiento de usuarios — desde funnel de conversión hasta modelo predictivo Random Forest con AUC-ROC 0.99 y dashboard ejecutivo de 5 vistas en Power BI.
-            </p>
-
-            <!-- MÉTRICAS CLAVE -->
-            <div class="featured-metrics">
+            <div class="featured-metrics" data-aos="fade-up" data-aos-delay="50">
                 <div class="featured-metric">
                     <span class="featured-metric-value">2.7M+</span>
                     <span class="featured-metric-label" data-es="Eventos Analizados" data-en="Events Analyzed">Eventos Analizados</span>
@@ -433,48 +278,21 @@
                 </div>
             </div>
 
-            <!-- FLUJO TÉCNICO: PYTHON → SQLITE → POWER BI -->
-            <div class="featured-flow">
-                <div class="featured-flow-item">
-                    <div class="featured-flow-icon"><i class="bi bi-code-slash"></i></div>
-                    <h5>Python</h5>
-                    <p data-es="Limpieza, EDA, análisis de funnel, segmentación K-Means (k=4) y modelo predictivo Random Forest sobre 2.7M+ eventos reales."
-                       data-en="Cleaning, EDA, funnel analysis, K-Means segmentation (k=4) and Random Forest predictive model on 2.7M+ real events.">
-                       Limpieza, EDA, análisis de funnel, segmentación K-Means (k=4) y modelo predictivo Random Forest sobre 2.7M+ eventos reales.
-                    </p>
-                </div>
-                <div class="featured-flow-arrow"><i class="bi bi-arrow-right"></i></div>
-                <div class="featured-flow-item">
-                    <div class="featured-flow-icon"><i class="bi bi-database"></i></div>
-                    <h5>SQLite</h5>
-                    <p data-es="Almacenamiento intermedio del dataset procesado para consultas analíticas eficientes y exportación estructurada hacia Power BI."
-                       data-en="Intermediate storage of processed dataset for efficient analytical queries and structured export to Power BI.">
-                       Almacenamiento intermedio del dataset procesado para consultas analíticas eficientes y exportación estructurada hacia Power BI.
-                    </p>
-                </div>
-                <div class="featured-flow-arrow"><i class="bi bi-arrow-right"></i></div>
-                <div class="featured-flow-item">
-                    <div class="featured-flow-icon"><i class="bi bi-bar-chart-line"></i></div>
-                    <h5>Power BI</h5>
-                    <p data-es="Dashboard ejecutivo de 5 vistas — funnel, análisis temporal, abandono de carrito, segmentación y modelo predictivo."
-                       data-en="5-view executive dashboard — funnel, temporal analysis, cart abandonment, segmentation and predictive model.">
-                       Dashboard ejecutivo de 5 vistas — funnel, análisis temporal, abandono de carrito, segmentación y modelo predictivo.
-                    </p>
-                </div>
-            </div>
+            <!-- LAYOUT HERO: CARRUSEL (izq) + SUBTÍTULO & INSIGHTS (der) -->
+            <div class="row g-4 align-items-start">
 
-            <!-- LAYOUT 2 COLUMNAS: CARRUSEL + INSIGHTS -->
-            <div class="row g-4 align-items-start mt-2">
-
-                <!-- COLUMNA IZQUIERDA: CARRUSEL DASHBOARD (5 capturas) -->
-                <div class="col-md-6">
-                    <div class="dashboard-gallery">
-                        <h4 class="dashboard-gallery-title"
-                            data-es="Dashboard Power BI — Vista Previa"
-                            data-en="Power BI Dashboard — Preview">
-                            Dashboard Power BI — Vista Previa
-                        </h4>
-                        <div class="dashboard-carousel">
+                <!-- CARRUSEL EN BROWSER FRAME -->
+                <div class="col-lg-7" data-aos="fade-right" data-aos-delay="100">
+                    <div class="dashboard-browser-frame">
+                        <div class="browser-chrome">
+                            <span class="browser-dot red"></span>
+                            <span class="browser-dot yellow"></span>
+                            <span class="browser-dot green"></span>
+                            <div class="browser-bar">
+                                <span class="browser-url">Power BI — E-commerce Conversion Dashboard</span>
+                            </div>
+                        </div>
+                        <div class="dashboard-carousel" data-autoplay="4000">
                             <div class="dashboard-carousel-track">
                                 <div class="dashboard-carousel-slide">
                                     <img src="1_funnel_conversion.png" alt="Funnel de Conversión" loading="lazy">
@@ -508,9 +326,14 @@
                     </div>
                 </div>
 
-                <!-- COLUMNA DERECHA: INSIGHTS DE NEGOCIO -->
-                <div class="col-md-6">
-                    <div class="featured-insights" style="margin-top: 2.8rem;">
+                <!-- SUBTÍTULO + INSIGHTS -->
+                <div class="col-lg-5" data-aos="fade-left" data-aos-delay="150">
+                    <p class="featured-subtitle"
+                        data-es="Análisis end-to-end sobre 2.7M+ eventos de comportamiento de usuarios — desde funnel de conversión hasta modelo predictivo Random Forest con AUC-ROC 0.99 y dashboard ejecutivo de 5 vistas en Power BI."
+                        data-en="End-to-end analysis of 2.7M+ user behavior events — from conversion funnel to Random Forest predictive model with AUC-ROC 0.99 and 5-view executive Power BI dashboard.">
+                        Análisis end-to-end sobre 2.7M+ eventos de comportamiento de usuarios — desde funnel de conversión hasta modelo predictivo Random Forest con AUC-ROC 0.99 y dashboard ejecutivo de 5 vistas en Power BI.
+                    </p>
+                    <div class="featured-insights">
                         <div class="insight-item">
                             <i class="bi bi-funnel-fill insight-icon"></i>
                             <p data-es="<strong>Solo el 0.84% completa una transacción</strong> — el funnel revela una caída crítica en la etapa AddToCart (2.69%), definiendo la optimización de consideración como la palanca de mayor impacto."
@@ -527,14 +350,23 @@
                         </div>
                         <div class="insight-item">
                             <i class="bi bi-people-fill insight-icon"></i>
-                            <p data-es="<strong>Compradores con Intención como segmento prioritario</strong> — 28% de tasa de conversión y 1.56 AddToCart promedio posicionan este cluster como el de mayor retorno por esfuerzo de retención frente a los 4 segmentos identificados."
+                            <p data-es="<strong>Compradores con Intención como segmento prioritario</strong> — 28% de tasa de conversión y 1.56 AddToCart promedio posicionan este cluster como el de mayor retorno por esfuerzo de retención."
                                data-en="<strong>Intent Buyers as priority segment</strong> — 28% conversion rate and 1.56 average AddToCart position this cluster as the highest return-per-retention-effort across the 4 identified segments.">
-                               <strong>Compradores con Intención como segmento prioritario</strong> — 28% de tasa de conversión y 1.56 AddToCart promedio posicionan este cluster como el de mayor retorno por esfuerzo de retención frente a los 4 segmentos identificados.
+                               <strong>Compradores con Intención como segmento prioritario</strong> — 28% de tasa de conversión y 1.56 AddToCart promedio posicionan este cluster como el de mayor retorno por esfuerzo de retención.
                             </p>
                         </div>
                     </div>
                 </div>
 
+            </div>
+
+            <!-- FLUJO TÉCNICO COMPACTO -->
+            <div class="featured-flow-compact" data-aos="fade-up">
+                <div class="flow-chip"><i class="bi bi-code-slash me-1"></i>Python</div>
+                <span class="flow-arrow"><i class="bi bi-arrow-right"></i></span>
+                <div class="flow-chip"><i class="bi bi-database me-1"></i>SQLite</div>
+                <span class="flow-arrow"><i class="bi bi-arrow-right"></i></span>
+                <div class="flow-chip"><i class="bi bi-bar-chart-line me-1"></i>Power BI</div>
             </div>
 
             <!-- FOOTER: BADGES TECNOLÓGICOS + BOTÓN REPOSITORIO -->
@@ -554,7 +386,135 @@
             </div>
 
         </div>
-        <!-- FIN TAB 2: RETAIL ROCKET -->
+        <!-- FIN TAB 1: FUNNEL & CONVERSION -->
+
+        <!-- ==============================
+             TAB 2: PIPELINE RIESGO CLIMÁTICO
+             Pipeline ETL en tiempo real
+             Stack: Python → SQL Server → Power BI
+        ============================== -->
+        <div class="featured-content" id="tab-clima">
+
+            <h2 class="featured-title" data-aos="fade-up"
+                data-es="Pipeline de Riesgo Climático — Corredor Logístico Colombia"
+                data-en="Climate Risk Pipeline — Colombia Logistics Corridor">
+                Pipeline de Riesgo Climático — Corredor Logístico Colombia
+            </h2>
+
+            <!-- MÉTRICAS CLAVE -->
+            <div class="featured-metrics" data-aos="fade-up" data-aos-delay="50">
+                <div class="featured-metric">
+                    <span class="featured-metric-value">8</span>
+                    <span class="featured-metric-label" data-es="Nodos Logísticos Monitoreados" data-en="Logistics Nodes Monitored">Nodos Logísticos Monitoreados</span>
+                </div>
+                <div class="featured-metric">
+                    <span class="featured-metric-value">1h</span>
+                    <span class="featured-metric-label" data-es="Frecuencia de Actualización" data-en="Update Frequency">Frecuencia de Actualización</span>
+                </div>
+                <div class="featured-metric">
+                    <span class="featured-metric-value">RT</span>
+                    <span class="featured-metric-label" data-es="Datos en Tiempo Real" data-en="Real-Time Data">Datos en Tiempo Real</span>
+                </div>
+            </div>
+
+            <!-- LAYOUT HERO: CARRUSEL (izq) + SUBTÍTULO & INSIGHTS (der) -->
+            <div class="row g-4 align-items-start">
+
+                <!-- CARRUSEL EN BROWSER FRAME -->
+                <div class="col-lg-7" data-aos="fade-right" data-aos-delay="100">
+                    <div class="dashboard-browser-frame">
+                        <div class="browser-chrome">
+                            <span class="browser-dot red"></span>
+                            <span class="browser-dot yellow"></span>
+                            <span class="browser-dot green"></span>
+                            <div class="browser-bar">
+                                <span class="browser-url">Power BI — Climate Risk Dashboard · Colombia</span>
+                            </div>
+                        </div>
+                        <div class="dashboard-carousel" data-autoplay="5000">
+                            <div class="dashboard-carousel-track">
+                                <div class="dashboard-carousel-slide">
+                                    <img src="1_monitoreo_tiempo_real.png" alt="Monitoreo en Tiempo Real" loading="lazy">
+                                    <span class="dashboard-carousel-label">Monitoreo en Tiempo Real</span>
+                                </div>
+                                <div class="dashboard-carousel-slide">
+                                    <img src="2_analisis_historico.png" alt="Análisis Histórico" loading="lazy">
+                                    <span class="dashboard-carousel-label">Análisis Histórico</span>
+                                </div>
+                                <div class="dashboard-carousel-slide">
+                                    <img src="3_seleccion_cali.png" alt="Selección por Ciudad" loading="lazy">
+                                    <span class="dashboard-carousel-label">Selección por Ciudad</span>
+                                </div>
+                            </div>
+                            <div class="dashboard-carousel-dots">
+                                <div class="dashboard-carousel-dot active"></div>
+                                <div class="dashboard-carousel-dot"></div>
+                                <div class="dashboard-carousel-dot"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SUBTÍTULO + INSIGHTS -->
+                <div class="col-lg-5" data-aos="fade-left" data-aos-delay="150">
+                    <p class="featured-subtitle"
+                        data-es="Pipeline ETL automatizado que consume datos climáticos en tiempo real desde OpenWeatherMap, clasifica el riesgo operacional de 8 nodos logísticos clave de Colombia y alimenta un dashboard ejecutivo en Power BI."
+                        data-en="Automated ETL pipeline consuming real-time climate data from OpenWeatherMap, classifying operational risk across 8 key Colombian logistics nodes and feeding an executive Power BI dashboard.">
+                        Pipeline ETL automatizado que consume datos climáticos en tiempo real desde OpenWeatherMap, clasifica el riesgo operacional de 8 nodos logísticos clave de Colombia y alimenta un dashboard ejecutivo en Power BI.
+                    </p>
+                    <div class="featured-insights">
+                        <div class="insight-item">
+                            <i class="bi bi-geo-alt-fill insight-icon"></i>
+                            <p data-es="<strong>Santiago de Cali identificada como nodo de atención</strong> — única ciudad en riesgo Medio del corredor con temperatura de 30°C, humedad del 88% y nubes dispersas afectando las operaciones logísticas del suroccidente colombiano."
+                               data-en="<strong>Santiago de Cali identified as attention node</strong> — only city at Medium risk in the corridor with 30°C temperature, 88% humidity and scattered clouds affecting logistics operations in southwestern Colombia.">
+                               <strong>Santiago de Cali identificada como nodo de atención</strong> — única ciudad en riesgo Medio del corredor con temperatura de 30°C, humedad del 88% y nubes dispersas afectando las operaciones logísticas del suroccidente colombiano.
+                            </p>
+                        </div>
+                        <div class="insight-item">
+                            <i class="bi bi-pie-chart-fill insight-icon"></i>
+                            <p data-es="<strong>Distribución histórica de riesgo consolidada:</strong> 76.47% Bajo, 19.85% Medio y 3.68% Alto — con condiciones adversas representando menos del 4% del tiempo monitoreado."
+                               data-en="<strong>Consolidated historical risk distribution:</strong> 76.47% Low, 19.85% Medium and 3.68% High — with adverse conditions representing less than 4% of monitored time.">
+                               <strong>Distribución histórica de riesgo consolidada:</strong> 76.47% Bajo, 19.85% Medio y 3.68% Alto — con condiciones adversas representando menos del 4% del tiempo monitoreado.
+                            </p>
+                        </div>
+                        <div class="insight-item">
+                            <i class="bi bi-thermometer-half insight-icon"></i>
+                            <p data-es="<strong>Cartagena lidera en temperatura promedio (29.8°C)</strong> mientras Manizales presenta las condiciones más frías (15.2°C) — gradiente térmico de 14.6°C entre nodos define requerimientos logísticos diferenciados por corredor."
+                               data-en="<strong>Cartagena leads in average temperature (29.8°C)</strong> while Manizales shows the coldest conditions (15.2°C) — 14.6°C thermal gradient between nodes defines differentiated logistics requirements per corridor.">
+                               <strong>Cartagena lidera en temperatura promedio (29.8°C)</strong> mientras Manizales presenta las condiciones más frías (15.2°C) — gradiente térmico de 14.6°C entre nodos define requerimientos logísticos diferenciados por corredor.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- FLUJO TÉCNICO COMPACTO -->
+            <div class="featured-flow-compact" data-aos="fade-up">
+                <div class="flow-chip"><i class="bi bi-cloud-rain me-1"></i>API Extract</div>
+                <span class="flow-arrow"><i class="bi bi-arrow-right"></i></span>
+                <div class="flow-chip"><i class="bi bi-server me-1"></i>Transform &amp; Load</div>
+                <span class="flow-arrow"><i class="bi bi-arrow-right"></i></span>
+                <div class="flow-chip"><i class="bi bi-bar-chart-line me-1"></i>Power BI</div>
+            </div>
+
+            <!-- FOOTER: BADGES TECNOLÓGICOS + BOTÓN REPOSITORIO -->
+            <div class="featured-footer">
+                <div class="featured-tech">
+                    <span class="featured-badge">Python</span>
+                    <span class="featured-badge">OpenWeatherMap API</span>
+                    <span class="featured-badge">SQL Server</span>
+                    <span class="featured-badge">Power BI</span>
+                    <span class="featured-badge">ETL Automatizado</span>
+                    <span class="featured-badge">Azure Maps</span>
+                </div>
+                <a href="https://github.com/DiegoTascon94/logistics-weather-pipeline.git" target="_blank" rel="noopener noreferrer" class="btn btn-primary px-4">
+                    <i class="bi bi-github me-2"></i>Ver Repositorio Completo
+                </a>
+            </div>
+
+        </div>
+        <!-- FIN TAB 2: PIPELINE RIESGO CLIMÁTICO -->
 
     </div>
 </section>

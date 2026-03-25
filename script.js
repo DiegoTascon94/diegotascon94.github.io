@@ -292,8 +292,33 @@ document.querySelectorAll('.dashboard-carousel').forEach(carousel => {
         isDragging = false;
     });
 
-    dots.forEach((dot, i) => dot.addEventListener('click', () => goTo(i)));
+    dots.forEach((dot, i) => dot.addEventListener('click', () => {
+        goTo(i);
+        resetAutoplay();
+    }));
     goTo(0);
+
+    // Auto-play si el carrusel tiene data-autoplay
+    const delay = parseInt(carousel.getAttribute('data-autoplay'));
+    let timer = null;
+
+    function startAutoplay() {
+        if (!delay) return;
+        timer = setInterval(() => goTo(current + 1), delay);
+    }
+
+    function resetAutoplay() {
+        if (!delay) return;
+        clearInterval(timer);
+        startAutoplay();
+    }
+
+    if (delay) {
+        startAutoplay();
+        carousel.addEventListener('mouseenter', () => clearInterval(timer));
+        carousel.addEventListener('mouseleave', startAutoplay);
+        carousel.addEventListener('touchend', resetAutoplay, { passive: true });
+    }
 });
 
 // =============================================
