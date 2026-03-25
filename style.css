@@ -924,10 +924,9 @@ body {
 
 .dashboard-browser-frame .dashboard-carousel-slide img {
     width: 100%;
-    aspect-ratio: 16 / 9;
-    object-fit: contain;
-    border-radius: 0;
+    height: auto;
     display: block;
+    border-radius: 0;
 }
 
 .dashboard-browser-frame .dashboard-carousel-label {
@@ -991,12 +990,13 @@ body {
     /* Ocultar URL text en mobile — los dots son suficiente */
     .browser-url { display: none; }
 
-    /* Flow chips: columna vertical sin flechas */
-    .featured-flow-compact {
-        flex-direction: column;
-        align-items: center;
-        gap: 0.5rem;
+    /* Flow chips: horizontales pero más compactos */
+    .flow-chip {
+        font-size: 0.78rem;
+        padding: 0.35rem 0.85rem;
     }
+
+    /* Ocultar flechas entre chips al hacer wrap */
     .flow-arrow { display: none; }
 }
 
