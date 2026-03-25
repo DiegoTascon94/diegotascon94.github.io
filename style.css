@@ -893,6 +893,7 @@ body {
 
 .browser-bar {
     flex: 1;
+    min-width: 0;
     height: 20px;
     background: rgba(255, 255, 255, 0.05);
     border-radius: 4px;
@@ -984,6 +985,19 @@ body {
 .flow-arrow {
     color: rgba(37, 99, 235, 0.4);
     font-size: 1rem;
+}
+
+@media (max-width: 991px) {
+    /* Ocultar URL text en mobile — los dots son suficiente */
+    .browser-url { display: none; }
+
+    /* Flow chips: columna vertical sin flechas */
+    .featured-flow-compact {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+    }
+    .flow-arrow { display: none; }
 }
 
 /* FOOTER DEL FEATURED */
