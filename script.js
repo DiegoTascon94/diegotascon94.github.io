@@ -331,3 +331,42 @@ document.querySelectorAll('.dashboard-carousel').forEach(carousel => {
 // EVENTOS DE SCROLL
 // =============================================
 window.addEventListener("scroll", updateActiveNavLink);
+
+// =============================================
+// FORMULARIO DE CONTACTO (Formspree async)
+// =============================================
+const contactForm = document.getElementById("contact-form");
+if (contactForm) {
+    contactForm.addEventListener("submit", async (e) => {
+        e.preventDefault();
+
+        const submitBtn = document.getElementById("form-submit-btn");
+        const successMsg = document.getElementById("form-success");
+        const errorMsg = document.getElementById("form-error");
+
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm me-2"></span>Enviando...';
+        successMsg.classList.add("d-none");
+        errorMsg.classList.add("d-none");
+
+        try {
+            const response = await fetch(contactForm.action, {
+                method: "POST",
+                body: new FormData(contactForm),
+                headers: { Accept: "application/json" }
+            });
+
+            if (response.ok) {
+                contactForm.reset();
+                successMsg.classList.remove("d-none");
+                submitBtn.innerHTML = '<i class="bi bi-check-circle me-2"></i>Enviado';
+            } else {
+                throw new Error("Error en el envío");
+            }
+        } catch {
+            errorMsg.classList.remove("d-none");
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = '<i class="bi bi-send me-2"></i>Enviar mensaje';
+        }
+    });
+}

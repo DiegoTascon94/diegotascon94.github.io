@@ -22,7 +22,7 @@ The entire site lives in three files:
 
 ### Key Design Patterns
 
-**Bilingual support (ES/EN)**: Content duplication via `data-es` and `data-en` attributes on elements. The language toggle in `script.js` swaps visibility between these attributes site-wide.
+**Bilingual support (ES/EN)**: Default language is Spanish (`currentLang = "es"`). Content duplication via `data-es` and `data-en` attributes on elements. The language toggle in `script.js` swaps text site-wide; elements with class `.header-title-sub` get a typewriter animation on switch. If the attribute value contains `<`, `innerHTML` is used instead of `textContent`.
 
 **Scroll animations**: AOS (Animate On Scroll) v2.3.1 initialized globally. Add `data-aos="fade-up"` (or other variants) to elements to animate them on scroll.
 
@@ -31,6 +31,10 @@ The entire site lives in three files:
 **Tab systems**: Skills, Certifications, and Featured Projects each use a Bootstrap tab pattern (`nav-tabs` / `tab-pane`) with custom JS to handle carousel resets on tab switch.
 
 **Stats bar counters**: Animated on first scroll-into-view using `IntersectionObserver`. Counter targets are set via `data-target` attribute.
+
+**Navbar active section**: Tracked on scroll using `updateActiveNavLink()`. Active link gets the `.active-section` class (not Bootstrap's `.active`).
+
+**Deployment**: The site is deployed at `https://diegotascon94.github.io`. Update canonical URL, OG tags, and JSON-LD `url` field in `<head>` when changing the deployment domain.
 
 ### CSS Variables (Theming)
 

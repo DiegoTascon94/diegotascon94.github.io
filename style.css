@@ -504,6 +504,7 @@ body {
     font-weight: 600;
 }
 
+
 /* =============================================
    FEATURED PROJECTS — SECCIÓN Y TABS
    ============================================= */
@@ -668,6 +669,15 @@ body {
     text-transform: uppercase;
     letter-spacing: 0.06em;
     font-weight: 600;
+}
+
+.featured-metric-note {
+    font-size: 0.68rem;
+    color: #475569;
+    font-style: italic;
+    margin-top: 0.25rem;
+    display: block;
+    line-height: 1.3;
 }
 
 @media (max-width: 768px) {
@@ -1487,7 +1497,7 @@ body {
 }
 
 /* =============================================
-   CONTACTO — REDISEÑADO
+   CONTACTO — DOS COLUMNAS
    ============================================= */
 .cta-contact {
     background: linear-gradient(160deg, #0F172A 0%, #1e293b 60%, #0F172A 100%);
@@ -1507,55 +1517,142 @@ body {
     pointer-events: none;
 }
 
-.cta-contact .d-flex {
-    flex-direction: row !important;
-    flex-wrap: nowrap !important;
-    justify-content: center;
-    gap: 1rem !important;
+/* --- Columna izquierda --- */
+.contact-desc {
+    color: #94A3B8;
+    font-size: 0.97rem;
+    line-height: 1.7;
 }
 
-.cta-contact .btn {
+.contact-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.contact-link-btn {
     display: flex;
     align-items: center;
-    gap: 0.6rem;
-    background: rgba(255, 255, 255, 0.03) !important;
-    border: 1px solid rgba(255, 255, 255, 0.1) !important;
-    border-radius: 12px !important;
-    padding: 0.85rem 1.6rem !important;
-    color: #CBD5E1 !important;
-    font-size: 0.9rem;
-    font-weight: 600;
-    transition: all 0.3s ease !important;
-    box-shadow: none !important;
+    gap: 0.8rem;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 10px;
+    padding: 0.8rem 1.2rem;
+    color: #CBD5E1;
+    font-size: 0.88rem;
+    font-weight: 500;
     text-decoration: none;
+    transition: all 0.25s ease;
 }
 
-.cta-contact .btn:hover {
-    background: rgba(37, 99, 235, 0.1) !important;
-    border-color: rgba(37, 99, 235, 0.4) !important;
-    color: #ffffff !important;
-    transform: translateY(-3px);
-}
-
-.cta-contact .btn i {
+.contact-link-btn i {
     font-size: 1.1rem;
+    color: var(--color-secundario);
+    flex-shrink: 0;
 }
 
-.cta-contact .btn-primary {
-    background: rgba(37, 99, 235, 0.15) !important;
-    border-color: rgba(37, 99, 235, 0.4) !important;
-    color: #93C5FD !important;
+.contact-link-btn:hover {
+    background: rgba(37, 99, 235, 0.1);
+    border-color: rgba(37, 99, 235, 0.35);
+    color: #ffffff;
+    transform: translateX(4px);
 }
 
-.cta-contact .btn-primary:hover {
-    background: rgba(37, 99, 235, 0.3) !important;
-    border-color: #2563EB !important;
-    color: #ffffff !important;
+/* --- Columna derecha: formulario --- */
+.contact-form-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    padding: 2rem 2rem 1.75rem;
+}
+
+.contact-form-title {
+    color: #E2E8F0;
+    font-weight: 700;
+    margin-bottom: 1.25rem;
+    font-size: 1rem;
+    letter-spacing: 0.01em;
+}
+
+.contact-input {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 0.75rem 1rem;
+    color: #E2E8F0;
+    font-size: 0.9rem;
+    font-family: inherit;
+    transition: border-color 0.2s ease, background 0.2s ease;
+    outline: none;
+}
+
+.contact-input::placeholder {
+    color: #64748B;
+}
+
+.contact-input:focus {
+    border-color: rgba(37, 99, 235, 0.5);
+    background: rgba(37, 99, 235, 0.04);
+}
+
+.contact-textarea {
+    resize: vertical;
+    min-height: 130px;
+}
+
+.contact-submit {
+    background: var(--color-secundario);
+    border: none;
+    border-radius: 10px;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 0.92rem;
+    padding: 0.8rem 1.5rem;
+    transition: all 0.25s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.contact-submit:hover {
+    background: #1d4ed8;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(37, 99, 235, 0.35);
+    color: #ffffff;
+}
+
+.contact-submit:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.contact-form-feedback {
+    margin-top: 1rem;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    font-size: 0.88rem;
+    display: flex;
+    align-items: center;
+}
+
+.contact-form-feedback.success {
+    background: rgba(34, 197, 94, 0.1);
+    border: 1px solid rgba(34, 197, 94, 0.25);
+    color: #86efac;
+}
+
+.contact-form-feedback.error {
+    background: rgba(239, 68, 68, 0.1);
+    border: 1px solid rgba(239, 68, 68, 0.25);
+    color: #fca5a5;
 }
 
 @media (max-width: 768px) {
-    .cta-contact .d-flex {
-        flex-wrap: wrap !important;
+    .contact-form-card {
+        padding: 1.5rem 1.25rem;
     }
 }
 
