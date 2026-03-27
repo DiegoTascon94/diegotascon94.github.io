@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
     <!-- SEO básico -->
-    <meta name="description" content="Portafolio de Diego Tascon, Data Analyst especializado en Retail, E-commerce, Logística y Marketing Digital. Proyectos reales con Python, SQL, Power BI y Machine Learning orientados a resultados de negocio." />
-    <meta name="keywords" content="data analyst, analista de datos, python, sql, power bi, machine learning, business intelligence, retail analytics, e-commerce, logística, portafolio, Colombia, RFM, forecasting" />
+    <meta name="description" content="Portafolio de Diego Tascon, Data Analyst especializado en Retail, E-commerce, Logística, Growth Analytics y Banca/Fintech. Proyectos reales con Python, SQL, Power BI y Machine Learning orientados a resultados de negocio." />
+    <meta name="keywords" content="data analyst, analista de datos, python, sql, power bi, machine learning, business intelligence, retail analytics, e-commerce, logística, fintech, growth analytics, segmentación RFM, forecasting, churn prediction, Colombia" />
     <meta name="author" content="Diego Tascon" />
     <meta name="robots" content="index, follow" />
     <meta name="google-site-verification" content="VblDhvuBhIkq-4KgL2jWst5q-Abj3_R7IDEFen9auJc" />
@@ -82,8 +82,8 @@
             <li class="nav-item"><a class="nav-link" href="#skills" data-es="Stack" data-en="Stack">Stack</a></li>
             <li class="nav-item"><a class="nav-link" href="#certifications" data-es="Formación" data-en="Training">Formación</a></li>
             <li class="nav-item"><a class="nav-link" href="#projects" data-es="Proyectos" data-en="Projects">Proyectos</a></li>
-            <li class="nav-item"><a class="nav-link" href="#industries" data-es="Industrias" data-en="Industries">Industrias</a></li>
-            <li class="nav-item"><a class="nav-link" href="#contact" data-es="Contacto" data-en="Contact">Contacto</a></li>
+            <li class="nav-item"><a class="nav-link" href="#industries">Industrias</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact">Contacto</a></li>
         </ul>
         </div>
     </div>
@@ -375,11 +375,20 @@
 
                 <!-- SUBTÍTULO + INSIGHTS -->
                 <div class="col-lg-5" data-aos="fade-up" data-aos-delay="150">
-                    <p class="featured-subtitle"
-                        data-es="Análisis end-to-end sobre 2.7M+ eventos de comportamiento de usuarios — desde funnel de conversión hasta modelo predictivo Random Forest con AUC-ROC 0.99 y dashboard ejecutivo de 5 vistas en Power BI."
-                        data-en="End-to-end analysis of 2.7M+ user behavior events — from conversion funnel to Random Forest predictive model with AUC-ROC 0.99 and 5-view executive Power BI dashboard.">
-                        Análisis end-to-end sobre 2.7M+ eventos de comportamiento de usuarios — desde funnel de conversión hasta modelo predictivo Random Forest con AUC-ROC 0.99 y dashboard ejecutivo de 5 vistas en Power BI.
-                    </p>
+                    <div class="featured-story">
+                        <div class="story-item">
+                            <span class="story-label story-problema">Problema</span>
+                            <p class="story-text">Una plataforma de e-commerce con 2.7M+ eventos de usuarios no sabía por qué perdía el 99.16% de sus visitantes sin comprar, ni qué segmentos valía la pena retener.</p>
+                        </div>
+                        <div class="story-item">
+                            <span class="story-label story-enfoque">Enfoque</span>
+                            <p class="story-text">Pipeline Python → SQLite para estructurar los datos, análisis de funnel por etapas, clustering K-Means para segmentar comportamientos y Random Forest (split 80/20) para predecir probabilidad de compra por visitante.</p>
+                        </div>
+                        <div class="story-item">
+                            <span class="story-label story-resultado">Resultado</span>
+                            <p class="story-text">$1,039,050 en revenue recuperable identificado, segmento "Compradores con Intención" con 28% de conversión como palanca principal y modelo predictivo con AUC-ROC 0.99 listo para producción.</p>
+                        </div>
+                    </div>
                     <div class="featured-insights">
                         <div class="insight-item">
                             <i class="bi bi-funnel-fill insight-icon"></i>
@@ -504,11 +513,20 @@
 
                 <!-- SUBTÍTULO + INSIGHTS -->
                 <div class="col-lg-5" data-aos="fade-up" data-aos-delay="150">
-                    <p class="featured-subtitle"
-                        data-es="Pipeline ETL automatizado que consume datos climáticos en tiempo real desde OpenWeatherMap, clasifica el riesgo operacional de 8 nodos logísticos clave de Colombia y alimenta un dashboard ejecutivo en Power BI."
-                        data-en="Automated ETL pipeline consuming real-time climate data from OpenWeatherMap, classifying operational risk across 8 key Colombian logistics nodes and feeding an executive Power BI dashboard.">
-                        Pipeline ETL automatizado que consume datos climáticos en tiempo real desde OpenWeatherMap, clasifica el riesgo operacional de 8 nodos logísticos clave de Colombia y alimenta un dashboard ejecutivo en Power BI.
-                    </p>
+                    <div class="featured-story">
+                        <div class="story-item">
+                            <span class="story-label story-problema">Problema</span>
+                            <p class="story-text">Un corredor logístico con 8 nodos en Colombia tomaba decisiones operativas de forma reactiva — sin visibilidad del impacto del clima en tiempo real sobre sus rutas y capacidades.</p>
+                        </div>
+                        <div class="story-item">
+                            <span class="story-label story-enfoque">Enfoque</span>
+                            <p class="story-text">Pipeline ETL automatizado en Python que extrae datos de OpenWeatherMap cada hora, aplica reglas de clasificación de riesgo (temperatura, humedad, viento, precipitación) y persiste en SQL Server para su consumo en BI.</p>
+                        </div>
+                        <div class="story-item">
+                            <span class="story-label story-resultado">Resultado</span>
+                            <p class="story-text">Dashboard ejecutivo con actualización horaria en Power BI, alertas de riesgo por nodo y distribución histórica que permite planificación preventiva — Santiago de Cali identificada como nodo de atención prioritaria.</p>
+                        </div>
+                    </div>
                     <div class="featured-insights">
                         <div class="insight-item">
                             <i class="bi bi-geo-alt-fill insight-icon"></i>
@@ -620,17 +638,17 @@
                 <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="300">
                     <div class="skill-column h-100 p-4">
                         <i class="bi bi-graph-up fs-1 text-primary"></i>
-                        <h4 class="mt-3" data-es="Visualización y BI" data-en="Visualization & BI">Visualización y BI</h4>
+                        <h4 class="mt-3">Visualización & BI</h4>
                         <div class="mt-2">
                             <span class="skill-badge">Power BI (DAX)</span>
-                            <span class="skill-badge">Tableau</span>
                             <span class="skill-badge">Excel Avanzado</span>
-                            <span class="skill-badge" data-es="Storytelling de Datos" data-en="Data Storytelling">Storytelling de Datos</span>
-                            <span class="skill-badge" data-es="Dashboards Interactivos" data-en="Interactive Dashboards">Dashboards Interactivos</span>
+                            <span class="skill-badge">Storytelling de Datos</span>
+                            <span class="skill-badge">Dashboards Interactivos</span>
                         </div>
                     </div>
                 </div>
             </div>
+
         </div>
 
         <!-- TAB: HABILIDADES INTERPERSONALES -->
@@ -779,15 +797,15 @@
                             <i class="bi bi-translate learning-icon-alt"></i>
                             <span class="learning-platform">Inglés</span>
                         </div>
-                        <h5 class="learning-title">Inglés Profesional</h5>
-                        <p class="learning-desc">Desarrollando fluidez para comunicarme con equipos internacionales y presentar análisis en entornos globales.</p>
+                        <h5 class="learning-title">Inglés Técnico Profesional</h5>
+                        <p class="learning-desc">Consumo diario de documentación técnica, datasets y artículos en inglés. En formación activa hacia fluidez conversacional para entornos internacionales.</p>
                         <div class="mt-3">
                             <div class="d-flex justify-content-between mb-1">
-                                <small class="text-muted">En progreso</small>
-                                <small class="text-muted fw-semibold">20%</small>
+                                <small class="text-muted">Formación activa</small>
+                                <small class="text-muted fw-semibold">Intermedio</small>
                             </div>
                             <div class="progress" style="height:5px;border-radius:3px">
-                                <div class="progress-bar bg-primary" style="width:20%"></div>
+                                <div class="progress-bar bg-primary" style="width:35%"></div>
                             </div>
                         </div>
                     </div>
@@ -1029,26 +1047,21 @@
     <div class="container px-4">
         <div class="row align-items-center g-5">
 
-            <!-- COLUMNA IZQUIERDA: CTA + links -->
+            <!-- COLUMNA IZQUIERDA: CTA -->
             <div class="col-lg-5" data-aos="fade-right">
                 <h2 class="mb-3 text-white fw-bold">¿Hablamos?</h2>
                 <p class="contact-desc mb-4">
                     Busco un equipo donde los datos sean parte real de las decisiones — no solo reportes. Si tienes un problema de negocio que se pueda resolver con datos, me interesa escucharlo.
                 </p>
-                <div class="contact-links">
-                    <a href="mailto:diegotasconlopez@gmail.com" class="contact-link-btn">
-                        <i class="bi bi-envelope-fill"></i>
-                        <span>diegotasconlopez@gmail.com</span>
-                    </a>
-                    <a href="https://linkedin.com/in/diego-tascon" target="_blank" rel="noopener noreferrer" class="contact-link-btn">
-                        <i class="bi bi-linkedin"></i>
-                        <span>linkedin.com/in/diego-tascon</span>
-                    </a>
-                    <a href="https://github.com/DiegoTascon94" target="_blank" rel="noopener noreferrer" class="contact-link-btn">
-                        <i class="bi bi-github"></i>
-                        <span>github.com/DiegoTascon94</span>
-                    </a>
-                </div>
+                <ul class="contact-cues">
+                    <li><i class="bi bi-check-circle-fill me-2"></i>Disponible para nuevas oportunidades</li>
+                    <li><i class="bi bi-check-circle-fill me-2"></i>Remoto o presencial · Colombia</li>
+                    <li><i class="bi bi-check-circle-fill me-2"></i>Respondo en menos de 24 horas</li>
+                </ul>
+                <p class="contact-email-fallback">
+                    O escríbeme directamente a
+                    <a href="mailto:diegotasconlopez@gmail.com">diegotasconlopez@gmail.com</a>
+                </p>
             </div>
 
             <!-- COLUMNA DERECHA: Formulario -->
@@ -1089,8 +1102,42 @@
     </div>
 </section>
 
-<footer class="py-4 bg-dark text-white-50">
-    <div class="container text-center"><small>© 2026 Diego Tascon | Data Analyst</small></div>
+<footer class="site-footer">
+    <div class="container px-4">
+        <div class="row align-items-center g-4 py-4">
+
+            <div class="col-md-4">
+                <p class="footer-name">Diego Tascon</p>
+                <p class="footer-tagline">Data Analyst · Colombia</p>
+                <div class="footer-socials">
+                    <a href="https://linkedin.com/in/diego-tascon" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                    <a href="https://github.com/DiegoTascon94" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="bi bi-github"></i></a>
+                    <a href="mailto:diegotasconlopez@gmail.com" aria-label="Email"><i class="bi bi-envelope"></i></a>
+                    <a href="https://wa.me/573175378345" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+                </div>
+            </div>
+
+            <div class="col-md-4 text-center">
+                <nav class="footer-nav">
+                    <a href="#about">Sobre mí</a>
+                    <a href="#featured">Destacados</a>
+                    <a href="#skills">Stack</a>
+                    <a href="#projects">Proyectos</a>
+                    <a href="#contact">Contacto</a>
+                </nav>
+            </div>
+
+            <div class="col-md-4 text-md-end">
+                <a href="Diego_Tascon_CV_Analisis_de_Datos.pdf" download class="footer-cv-btn">
+                    <i class="bi bi-download me-2"></i>Descargar CV
+                </a>
+                <p class="footer-updated">Actualizado · Marzo 2026</p>
+            </div>
+
+        </div>
+        <div class="footer-divider"></div>
+        <p class="footer-copy">© 2026 Diego Tascon — Data Analyst</p>
+    </div>
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" defer></script>

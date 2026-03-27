@@ -1296,6 +1296,8 @@ body {
     border-radius: 16px;
     padding: 1.8rem;
     height: 100%;
+    display: flex;
+    flex-direction: column;
     transition: all 0.3s ease;
 }
 
@@ -1343,6 +1345,7 @@ body {
     color: #64748B;
     line-height: 1.6;
     margin-bottom: 1rem;
+    flex-grow: 1;
 }
 
 .learning-status {
@@ -1654,6 +1657,196 @@ body {
     .contact-form-card {
         padding: 1.5rem 1.25rem;
     }
+}
+
+/* =============================================
+   FEATURED — STORYTELLING PROBLEMA→ENFOQUE→RESULTADO
+   ============================================= */
+.featured-story {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+}
+
+.story-item {
+    display: flex;
+    gap: 0.75rem;
+    align-items: flex-start;
+}
+
+.story-label {
+    flex-shrink: 0;
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    padding: 0.2rem 0.6rem;
+    border-radius: 4px;
+    margin-top: 0.15rem;
+}
+
+.story-problema {
+    background: rgba(239, 68, 68, 0.12);
+    color: #FCA5A5;
+    border: 1px solid rgba(239, 68, 68, 0.2);
+}
+
+.story-enfoque {
+    background: rgba(245, 158, 11, 0.12);
+    color: #FCD34D;
+    border: 1px solid rgba(245, 158, 11, 0.2);
+}
+
+.story-resultado {
+    background: rgba(34, 197, 94, 0.12);
+    color: #86EFAC;
+    border: 1px solid rgba(34, 197, 94, 0.2);
+}
+
+.story-text {
+    color: #94A3B8;
+    font-size: 0.88rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* =============================================
+   CONTACTO — COLUMNA IZQUIERDA
+   ============================================= */
+.contact-cues {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.contact-cues li {
+    color: #94A3B8;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+}
+
+.contact-cues li i {
+    color: #22C55E;
+    font-size: 0.85rem;
+}
+
+.contact-email-fallback {
+    font-size: 0.82rem;
+    color: #475569;
+    margin: 0;
+}
+
+.contact-email-fallback a {
+    color: #60A5FA;
+    text-decoration: none;
+}
+
+.contact-email-fallback a:hover {
+    text-decoration: underline;
+}
+
+/* =============================================
+   FOOTER REDISEÑADO
+   ============================================= */
+.site-footer {
+    background: #0F172A;
+    border-top: 1px solid rgba(255,255,255,0.06);
+}
+
+.footer-name {
+    color: #F1F5F9;
+    font-weight: 700;
+    font-size: 1rem;
+    margin-bottom: 0.15rem;
+}
+
+.footer-tagline {
+    color: #64748B;
+    font-size: 0.82rem;
+    margin-bottom: 0.75rem;
+}
+
+.footer-socials {
+    display: flex;
+    gap: 0.65rem;
+}
+
+.footer-socials a {
+    color: #475569;
+    font-size: 1.1rem;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.footer-socials a:hover {
+    color: var(--color-secundario);
+}
+
+.footer-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.25rem 1rem;
+}
+
+.footer-nav a {
+    color: #475569;
+    font-size: 0.8rem;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.footer-nav a:hover {
+    color: #94A3B8;
+}
+
+.footer-cv-btn {
+    display: inline-flex;
+    align-items: center;
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 8px;
+    color: #94A3B8;
+    font-size: 0.82rem;
+    font-weight: 600;
+    padding: 0.45rem 1rem;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    margin-bottom: 0.5rem;
+}
+
+.footer-cv-btn:hover {
+    border-color: rgba(37, 99, 235, 0.4);
+    color: #ffffff;
+}
+
+.footer-updated {
+    color: #334155;
+    font-size: 0.73rem;
+    margin-top: 0.4rem;
+    margin-bottom: 0;
+}
+
+.footer-divider {
+    border-top: 1px solid rgba(255,255,255,0.05);
+    margin: 0.25rem 0 0.75rem;
+}
+
+.footer-copy {
+    color: #334155;
+    font-size: 0.75rem;
+    text-align: center;
+    padding-bottom: 1rem;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .footer-nav { gap: 0.25rem 0.75rem; }
+    .col-md-4.text-md-end { text-align: center !important; }
 }
 
 /* =============================================
