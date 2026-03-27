@@ -607,26 +607,59 @@ body {
     }
 }
 
-/* TÍTULO Y SUBTÍTULO */
-.featured-title {
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: #ffffff;
-    text-align: center;
-    margin-bottom: 1rem;
+/* HEADER: título + métricas en fila */
+.featured-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+    flex-wrap: wrap;
 }
 
-.featured-subtitle {
-    color: #94A3B8;
+.featured-title {
+    font-size: 1.55rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0;
+    line-height: 1.3;
+    flex: 1;
+    min-width: 200px;
+}
+
+.featured-header-metrics {
+    display: flex;
+    gap: 1.25rem;
+    flex-shrink: 0;
+}
+
+.featured-header-metrics .featured-metric {
+    min-width: auto;
+    padding: 0.75rem 1rem;
     text-align: center;
-    max-width: 700px;
-    margin: 0 auto 3rem;
-    font-size: 1rem;
-    line-height: 1.7;
+}
+
+.featured-header-metrics .featured-metric-value {
+    font-size: 1.8rem;
+}
+
+/* STORY CARD: contenedor flex para empujar flow al fondo */
+.featured-story-card {
+    display: flex;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 14px;
+    padding: 1.5rem;
 }
 
 @media (max-width: 768px) {
-    .featured-title { font-size: 1.8rem; }
+    .featured-header { flex-direction: column; align-items: flex-start; gap: 1rem; }
+    .featured-title { font-size: 1.3rem; }
+    .featured-header-metrics { gap: 0.75rem; }
+    .featured-header-metrics .featured-metric-value { font-size: 1.4rem; }
 }
 
 /* MÉTRICAS */
@@ -801,9 +834,25 @@ body {
 
 .dashboard-carousel-dots {
     display: flex;
+    align-items: center;
     justify-content: center;
-    gap: 0.4rem;
-    margin-top: 0.75rem;
+    gap: 0.5rem;
+    padding: 0.6rem 0;
+}
+
+.carousel-nav-btn {
+    background: none;
+    border: none;
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 0.9rem;
+    cursor: pointer;
+    padding: 0 0.2rem;
+    line-height: 1;
+    transition: color 0.2s ease;
+}
+
+.carousel-nav-btn:hover {
+    color: var(--color-secundario);
 }
 
 .dashboard-carousel-dot {
@@ -1017,6 +1066,9 @@ body {
     justify-content: center;
     gap: 1.5rem;
     flex-wrap: wrap;
+    margin-top: 2.5rem;
+    padding-top: 1.75rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.07);
 }
 
 .featured-tech {
@@ -1666,7 +1718,8 @@ body {
     display: flex;
     flex-direction: column;
     gap: 0.75rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 0;
+    flex-grow: 1;
 }
 
 .story-item {

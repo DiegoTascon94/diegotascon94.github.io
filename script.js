@@ -302,6 +302,12 @@ document.querySelectorAll('.dashboard-carousel').forEach(carousel => {
         goTo(i);
         resetAutoplay();
     }));
+
+    const prevBtn = carousel.querySelector('.carousel-prev');
+    const nextBtn = carousel.querySelector('.carousel-next');
+    if (prevBtn) prevBtn.addEventListener('click', () => { goTo(current - 1); resetAutoplay(); });
+    if (nextBtn) nextBtn.addEventListener('click', () => { goTo(current + 1); resetAutoplay(); });
+
     goTo(0);
 
     // Auto-play si el carrusel tiene data-autoplay

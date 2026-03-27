@@ -280,56 +280,39 @@
 <section class="featured-section" id="featured">
     <div class="container px-4">
 
-        <div class="featured-label" data-aos="fade-up">
-            <span data-es="⭐ Proyectos Destacados" data-en="⭐ Featured Projects">⭐ Proyectos Destacados</span>
-        </div>
-
-        <!-- ==============================
-             TABS DE NAVEGACIÓN
-             2 proyectos destacados
-        ============================== -->
-        <div class="featured-tabs" data-aos="fade-up" data-aos-delay="100">
+        <div class="featured-tabs" data-aos="fade-up">
             <button class="featured-tab active" data-tab="retailrocket"
                 data-es="Funnel & Conversion" data-en="Funnel & Conversion">Funnel & Conversion</button>
             <button class="featured-tab" data-tab="clima"
                 data-es="Pipeline Riesgo Climático" data-en="Climate Risk Pipeline">Pipeline Riesgo Climático</button>
         </div>
 
-        <!-- ==============================
-             TAB 1: FUNNEL & CONVERSION (E-commerce Intelligence)
-             Análisis end-to-end de conversión — DISEÑO HERO
-             Stack: Python → SQLite → Power BI
-        ============================== -->
         <div class="featured-content active" id="tab-retailrocket">
 
-            <h2 class="featured-title" data-aos="fade-up"
-                data-es="E-commerce Funnel & Conversion Intelligence"
-                data-en="E-commerce Funnel & Conversion Intelligence">
-                E-commerce Funnel &amp; Conversion Intelligence
-            </h2>
-
-            <!-- MÉTRICAS CLAVE -->
-            <div class="featured-metrics" data-aos="fade-up" data-aos-delay="50">
-                <div class="featured-metric">
-                    <span class="featured-metric-value">2.7M+</span>
-                    <span class="featured-metric-label" data-es="Eventos Analizados" data-en="Events Analyzed">Eventos Analizados</span>
-                </div>
-                <div class="featured-metric">
-                    <span class="featured-metric-value">0.99</span>
-                    <span class="featured-metric-label" data-es="AUC-ROC Modelo RF" data-en="RF Model AUC-ROC">AUC-ROC Modelo RF</span>
-                    <small class="featured-metric-note">split 80/20 · test set independiente · dataset Kaggle</small>
-                </div>
-                <div class="featured-metric">
-                    <span class="featured-metric-value">$1M+</span>
-                    <span class="featured-metric-label" data-es="Revenue Recuperable" data-en="Recoverable Revenue">Revenue Recuperable</span>
+            <!-- HEADER: título + métricas en una fila -->
+            <div class="featured-header" data-aos="fade-up">
+                <h2 class="featured-title">E-commerce Funnel &amp; Conversion Intelligence</h2>
+                <div class="featured-header-metrics">
+                    <div class="featured-metric">
+                        <span class="featured-metric-value">2.7M+</span>
+                        <span class="featured-metric-label">Eventos</span>
+                    </div>
+                    <div class="featured-metric">
+                        <span class="featured-metric-value">0.99</span>
+                        <span class="featured-metric-label">AUC-ROC · RF</span>
+                        <small class="featured-metric-note">split 80/20 · test independiente</small>
+                    </div>
+                    <div class="featured-metric">
+                        <span class="featured-metric-value">$1M+</span>
+                        <span class="featured-metric-label">Revenue Recuperable</span>
+                    </div>
                 </div>
             </div>
 
-            <!-- LAYOUT HERO: CARRUSEL (izq) + SUBTÍTULO & INSIGHTS (der) -->
+            <!-- LAYOUT: carousel + story -->
             <div class="row g-4 align-items-start">
 
-                <!-- CARRUSEL EN BROWSER FRAME -->
-                <div class="col-lg-7" data-aos="fade-up" data-aos-delay="100">
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
                     <div class="dashboard-browser-frame">
                         <div class="browser-chrome">
                             <span class="browser-dot red"></span>
@@ -363,69 +346,46 @@
                                 </div>
                             </div>
                             <div class="dashboard-carousel-dots">
+                                <button class="carousel-nav-btn carousel-prev" aria-label="Anterior"><i class="bi bi-chevron-left"></i></button>
                                 <div class="dashboard-carousel-dot active"></div>
                                 <div class="dashboard-carousel-dot"></div>
                                 <div class="dashboard-carousel-dot"></div>
                                 <div class="dashboard-carousel-dot"></div>
                                 <div class="dashboard-carousel-dot"></div>
+                                <button class="carousel-nav-btn carousel-next" aria-label="Siguiente"><i class="bi bi-chevron-right"></i></button>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- SUBTÍTULO + INSIGHTS -->
-                <div class="col-lg-5" data-aos="fade-up" data-aos-delay="150">
-                    <div class="featured-story">
-                        <div class="story-item">
-                            <span class="story-label story-problema">Problema</span>
-                            <p class="story-text">Una plataforma de e-commerce con 2.7M+ eventos de usuarios no sabía por qué perdía el 99.16% de sus visitantes sin comprar, ni qué segmentos valía la pena retener.</p>
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="150">
+                    <div class="featured-story-card">
+                        <div class="featured-story">
+                            <div class="story-item">
+                                <span class="story-label story-problema">Problema</span>
+                                <p class="story-text">Una plataforma de e-commerce con 2.7M+ eventos no sabía por qué perdía el 99.16% de sus visitantes sin comprar, ni qué segmentos valía la pena retener.</p>
+                            </div>
+                            <div class="story-item">
+                                <span class="story-label story-enfoque">Enfoque</span>
+                                <p class="story-text">Pipeline Python → SQLite, análisis de funnel por etapas, clustering K-Means y modelo Random Forest (split 80/20) para predecir probabilidad de compra por visitante.</p>
+                            </div>
+                            <div class="story-item">
+                                <span class="story-label story-resultado">Resultado</span>
+                                <p class="story-text">$1,039,050 en revenue recuperable, segmento "Compradores con Intención" con 28% de conversión como palanca principal y AUC-ROC 0.99 listo para producción.</p>
+                            </div>
                         </div>
-                        <div class="story-item">
-                            <span class="story-label story-enfoque">Enfoque</span>
-                            <p class="story-text">Pipeline Python → SQLite para estructurar los datos, análisis de funnel por etapas, clustering K-Means para segmentar comportamientos y Random Forest (split 80/20) para predecir probabilidad de compra por visitante.</p>
-                        </div>
-                        <div class="story-item">
-                            <span class="story-label story-resultado">Resultado</span>
-                            <p class="story-text">$1,039,050 en revenue recuperable identificado, segmento "Compradores con Intención" con 28% de conversión como palanca principal y modelo predictivo con AUC-ROC 0.99 listo para producción.</p>
-                        </div>
-                    </div>
-                    <div class="featured-insights">
-                        <div class="insight-item">
-                            <i class="bi bi-funnel-fill insight-icon"></i>
-                            <p data-es="<strong>Solo el 0.84% completa una transacción</strong> — el funnel revela una caída crítica en la etapa AddToCart (2.69%), definiendo la optimización de consideración como la palanca de mayor impacto."
-                               data-en="<strong>Only 0.84% complete a transaction</strong> — the funnel reveals a critical drop at the AddToCart stage (2.69%), making consideration optimization the highest-impact lever.">
-                               <strong>Solo el 0.84% completa una transacción</strong> — el funnel revela una caída crítica en la etapa AddToCart (2.69%), definiendo la optimización de consideración como la palanca de mayor impacto.
-                            </p>
-                        </div>
-                        <div class="insight-item">
-                            <i class="bi bi-cart-x-fill insight-icon warning"></i>
-                            <p data-es="<strong>$1,039,050 en revenue recuperable</strong> — el 73% del abandono de carrito ocurre en los primeros 30 minutos, definiendo una ventana crítica de retargeting para campañas de email y notificaciones push."
-                               data-en="<strong>$1,039,050 in recoverable revenue</strong> — 73% of cart abandonment occurs in the first 30 minutes, defining a critical retargeting window for email campaigns and push notifications.">
-                               <strong>$1,039,050 en revenue recuperable</strong> — el 73% del abandono de carrito ocurre en los primeros 30 minutos, definiendo una ventana crítica de retargeting para campañas de email y notificaciones push.
-                            </p>
-                        </div>
-                        <div class="insight-item">
-                            <i class="bi bi-people-fill insight-icon"></i>
-                            <p data-es="<strong>Compradores con Intención como segmento prioritario</strong> — 28% de tasa de conversión y 1.56 AddToCart promedio posicionan este cluster como el de mayor retorno por esfuerzo de retención."
-                               data-en="<strong>Intent Buyers as priority segment</strong> — 28% conversion rate and 1.56 average AddToCart position this cluster as the highest return-per-retention-effort across the 4 identified segments.">
-                               <strong>Compradores con Intención como segmento prioritario</strong> — 28% de tasa de conversión y 1.56 AddToCart promedio posicionan este cluster como el de mayor retorno por esfuerzo de retención.
-                            </p>
+                        <div class="featured-flow-compact">
+                            <div class="flow-chip"><i class="bi bi-code-slash me-1"></i>Python</div>
+                            <span class="flow-arrow"><i class="bi bi-arrow-right"></i></span>
+                            <div class="flow-chip"><i class="bi bi-database me-1"></i>SQLite</div>
+                            <span class="flow-arrow"><i class="bi bi-arrow-right"></i></span>
+                            <div class="flow-chip"><i class="bi bi-bar-chart-line me-1"></i>Power BI</div>
                         </div>
                     </div>
                 </div>
 
             </div>
 
-            <!-- FLUJO TÉCNICO COMPACTO -->
-            <div class="featured-flow-compact" data-aos="fade-up">
-                <div class="flow-chip"><i class="bi bi-code-slash me-1"></i>Python</div>
-                <span class="flow-arrow"><i class="bi bi-arrow-right"></i></span>
-                <div class="flow-chip"><i class="bi bi-database me-1"></i>SQLite</div>
-                <span class="flow-arrow"><i class="bi bi-arrow-right"></i></span>
-                <div class="flow-chip"><i class="bi bi-bar-chart-line me-1"></i>Power BI</div>
-            </div>
-
-            <!-- FOOTER: BADGES TECNOLÓGICOS + BOTÓN REPOSITORIO -->
             <div class="featured-footer">
                 <div class="featured-tech">
                     <span class="featured-badge">Python</span>
@@ -437,47 +397,37 @@
                     <span class="featured-badge">Funnel Analysis</span>
                 </div>
                 <a href="https://github.com/DiegoTascon94/retail-rocket-conversion-dashboard.git" target="_blank" rel="noopener noreferrer" class="btn btn-primary px-4">
-                    <i class="bi bi-github me-2"></i>Ver Repositorio Completo
+                    <i class="bi bi-github me-2"></i>Ver Repositorio
                 </a>
             </div>
 
         </div>
-        <!-- FIN TAB 1: FUNNEL & CONVERSION -->
 
-        <!-- ==============================
-             TAB 2: PIPELINE RIESGO CLIMÁTICO
-             Pipeline ETL en tiempo real
-             Stack: Python → SQL Server → Power BI
-        ============================== -->
         <div class="featured-content" id="tab-clima">
 
-            <h2 class="featured-title" data-aos="fade-up"
-                data-es="Pipeline de Riesgo Climático — Corredor Logístico Colombia"
-                data-en="Climate Risk Pipeline — Colombia Logistics Corridor">
-                Pipeline de Riesgo Climático — Corredor Logístico Colombia
-            </h2>
-
-            <!-- MÉTRICAS CLAVE -->
-            <div class="featured-metrics" data-aos="fade-up" data-aos-delay="50">
-                <div class="featured-metric">
-                    <span class="featured-metric-value">8</span>
-                    <span class="featured-metric-label" data-es="Nodos Logísticos Monitoreados" data-en="Logistics Nodes Monitored">Nodos Logísticos Monitoreados</span>
-                </div>
-                <div class="featured-metric">
-                    <span class="featured-metric-value">1h</span>
-                    <span class="featured-metric-label" data-es="Frecuencia de Actualización" data-en="Update Frequency">Frecuencia de Actualización</span>
-                </div>
-                <div class="featured-metric">
-                    <span class="featured-metric-value">RT</span>
-                    <span class="featured-metric-label" data-es="Datos en Tiempo Real" data-en="Real-Time Data">Datos en Tiempo Real</span>
+            <!-- HEADER: título + métricas en una fila -->
+            <div class="featured-header" data-aos="fade-up">
+                <h2 class="featured-title">Pipeline de Riesgo Climático — Corredor Logístico Colombia</h2>
+                <div class="featured-header-metrics">
+                    <div class="featured-metric">
+                        <span class="featured-metric-value">8</span>
+                        <span class="featured-metric-label">Nodos Monitoreados</span>
+                    </div>
+                    <div class="featured-metric">
+                        <span class="featured-metric-value">1h</span>
+                        <span class="featured-metric-label">Actualización</span>
+                    </div>
+                    <div class="featured-metric">
+                        <span class="featured-metric-value">RT</span>
+                        <span class="featured-metric-label">Tiempo Real</span>
+                    </div>
                 </div>
             </div>
 
-            <!-- LAYOUT HERO: CARRUSEL (izq) + SUBTÍTULO & INSIGHTS (der) -->
+            <!-- LAYOUT: carousel + story -->
             <div class="row g-4 align-items-start">
 
-                <!-- CARRUSEL EN BROWSER FRAME -->
-                <div class="col-lg-7" data-aos="fade-up" data-aos-delay="100">
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
                     <div class="dashboard-browser-frame">
                         <div class="browser-chrome">
                             <span class="browser-dot red"></span>
@@ -503,67 +453,44 @@
                                 </div>
                             </div>
                             <div class="dashboard-carousel-dots">
+                                <button class="carousel-nav-btn carousel-prev" aria-label="Anterior"><i class="bi bi-chevron-left"></i></button>
                                 <div class="dashboard-carousel-dot active"></div>
                                 <div class="dashboard-carousel-dot"></div>
                                 <div class="dashboard-carousel-dot"></div>
+                                <button class="carousel-nav-btn carousel-next" aria-label="Siguiente"><i class="bi bi-chevron-right"></i></button>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- SUBTÍTULO + INSIGHTS -->
-                <div class="col-lg-5" data-aos="fade-up" data-aos-delay="150">
-                    <div class="featured-story">
-                        <div class="story-item">
-                            <span class="story-label story-problema">Problema</span>
-                            <p class="story-text">Un corredor logístico con 8 nodos en Colombia tomaba decisiones operativas de forma reactiva — sin visibilidad del impacto del clima en tiempo real sobre sus rutas y capacidades.</p>
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="150">
+                    <div class="featured-story-card">
+                        <div class="featured-story">
+                            <div class="story-item">
+                                <span class="story-label story-problema">Problema</span>
+                                <p class="story-text">Un corredor logístico con 8 nodos en Colombia tomaba decisiones operativas de forma reactiva — sin visibilidad del impacto climático en tiempo real sobre rutas y capacidades.</p>
+                            </div>
+                            <div class="story-item">
+                                <span class="story-label story-enfoque">Enfoque</span>
+                                <p class="story-text">Pipeline ETL automatizado en Python que extrae datos de OpenWeatherMap cada hora, clasifica riesgo operacional por umbrales (temperatura, humedad, viento, precipitación) y persiste en SQL Server.</p>
+                            </div>
+                            <div class="story-item">
+                                <span class="story-label story-resultado">Resultado</span>
+                                <p class="story-text">Dashboard ejecutivo con actualización horaria en Power BI — Santiago de Cali identificada como nodo prioritario, con distribución histórica 76.5% Bajo / 19.8% Medio / 3.7% Alto.</p>
+                            </div>
                         </div>
-                        <div class="story-item">
-                            <span class="story-label story-enfoque">Enfoque</span>
-                            <p class="story-text">Pipeline ETL automatizado en Python que extrae datos de OpenWeatherMap cada hora, aplica reglas de clasificación de riesgo (temperatura, humedad, viento, precipitación) y persiste en SQL Server para su consumo en BI.</p>
-                        </div>
-                        <div class="story-item">
-                            <span class="story-label story-resultado">Resultado</span>
-                            <p class="story-text">Dashboard ejecutivo con actualización horaria en Power BI, alertas de riesgo por nodo y distribución histórica que permite planificación preventiva — Santiago de Cali identificada como nodo de atención prioritaria.</p>
-                        </div>
-                    </div>
-                    <div class="featured-insights">
-                        <div class="insight-item">
-                            <i class="bi bi-geo-alt-fill insight-icon"></i>
-                            <p data-es="<strong>Santiago de Cali identificada como nodo de atención</strong> — única ciudad en riesgo Medio del corredor con temperatura de 30°C, humedad del 88% y nubes dispersas afectando las operaciones logísticas del suroccidente colombiano."
-                               data-en="<strong>Santiago de Cali identified as attention node</strong> — only city at Medium risk in the corridor with 30°C temperature, 88% humidity and scattered clouds affecting logistics operations in southwestern Colombia.">
-                               <strong>Santiago de Cali identificada como nodo de atención</strong> — única ciudad en riesgo Medio del corredor con temperatura de 30°C, humedad del 88% y nubes dispersas afectando las operaciones logísticas del suroccidente colombiano.
-                            </p>
-                        </div>
-                        <div class="insight-item">
-                            <i class="bi bi-pie-chart-fill insight-icon"></i>
-                            <p data-es="<strong>Distribución histórica de riesgo consolidada:</strong> 76.47% Bajo, 19.85% Medio y 3.68% Alto — con condiciones adversas representando menos del 4% del tiempo monitoreado."
-                               data-en="<strong>Consolidated historical risk distribution:</strong> 76.47% Low, 19.85% Medium and 3.68% High — with adverse conditions representing less than 4% of monitored time.">
-                               <strong>Distribución histórica de riesgo consolidada:</strong> 76.47% Bajo, 19.85% Medio y 3.68% Alto — con condiciones adversas representando menos del 4% del tiempo monitoreado.
-                            </p>
-                        </div>
-                        <div class="insight-item">
-                            <i class="bi bi-thermometer-half insight-icon"></i>
-                            <p data-es="<strong>Cartagena lidera en temperatura promedio (29.8°C)</strong> mientras Manizales presenta las condiciones más frías (15.2°C) — gradiente térmico de 14.6°C entre nodos define requerimientos logísticos diferenciados por corredor."
-                               data-en="<strong>Cartagena leads in average temperature (29.8°C)</strong> while Manizales shows the coldest conditions (15.2°C) — 14.6°C thermal gradient between nodes defines differentiated logistics requirements per corridor.">
-                               <strong>Cartagena lidera en temperatura promedio (29.8°C)</strong> mientras Manizales presenta las condiciones más frías (15.2°C) — gradiente térmico de 14.6°C entre nodos define requerimientos logísticos diferenciados por corredor.
-                            </p>
+                        <div class="featured-flow-compact">
+                            <div class="flow-chip"><i class="bi bi-cloud-rain me-1"></i>API Extract</div>
+                            <span class="flow-arrow"><i class="bi bi-arrow-right"></i></span>
+                            <div class="flow-chip"><i class="bi bi-server me-1"></i>Transform &amp; Load</div>
+                            <span class="flow-arrow"><i class="bi bi-arrow-right"></i></span>
+                            <div class="flow-chip"><i class="bi bi-bar-chart-line me-1"></i>Power BI</div>
                         </div>
                     </div>
                 </div>
 
             </div>
 
-            <!-- FLUJO TÉCNICO COMPACTO -->
-            <div class="featured-flow-compact" data-aos="fade-up">
-                <div class="flow-chip"><i class="bi bi-cloud-rain me-1"></i>API Extract</div>
-                <span class="flow-arrow"><i class="bi bi-arrow-right"></i></span>
-                <div class="flow-chip"><i class="bi bi-server me-1"></i>Transform &amp; Load</div>
-                <span class="flow-arrow"><i class="bi bi-arrow-right"></i></span>
-                <div class="flow-chip"><i class="bi bi-bar-chart-line me-1"></i>Power BI</div>
-            </div>
-
-            <!-- FOOTER: BADGES TECNOLÓGICOS + BOTÓN REPOSITORIO -->
             <div class="featured-footer">
                 <div class="featured-tech">
                     <span class="featured-badge">Python</span>
@@ -574,12 +501,11 @@
                     <span class="featured-badge">Azure Maps</span>
                 </div>
                 <a href="https://github.com/DiegoTascon94/logistics-weather-pipeline.git" target="_blank" rel="noopener noreferrer" class="btn btn-primary px-4">
-                    <i class="bi bi-github me-2"></i>Ver Repositorio Completo
+                    <i class="bi bi-github me-2"></i>Ver Repositorio
                 </a>
             </div>
 
         </div>
-        <!-- FIN TAB 2: PIPELINE RIESGO CLIMÁTICO -->
 
     </div>
 </section>
