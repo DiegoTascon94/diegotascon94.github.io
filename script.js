@@ -98,7 +98,7 @@ if (dataWidget) {
     const widgetObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                document.querySelectorAll('.chart-bar').forEach(bar => {
+                document.querySelectorAll('.dw-prog-bar').forEach(bar => {
                     bar.style.animation = 'none';
                     bar.offsetHeight;
                     bar.style.animation = '';

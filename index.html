@@ -211,54 +211,79 @@
                         <span class="data-widget-dot red"></span>
                         <span class="data-widget-dot yellow"></span>
                         <span class="data-widget-dot green"></span>
-                        <span class="data-widget-title">analysis_output.py</span>
+                        <span class="data-widget-title">conversion_model.py</span>
                     </div>
                     <div class="data-widget-body">
-                        <div class="data-chart">
-                            <div class="chart-bars">
-                                <div class="chart-bar" style="--bar-height: 45%;" data-aos="fade-up" data-aos-delay="400"></div>
-                                <div class="chart-bar" style="--bar-height: 65%;" data-aos="fade-up" data-aos-delay="500"></div>
-                                <div class="chart-bar" style="--bar-height: 55%;" data-aos="fade-up" data-aos-delay="600"></div>
-                                <div class="chart-bar" style="--bar-height: 80%;" data-aos="fade-up" data-aos-delay="700"></div>
-                                <div class="chart-bar" style="--bar-height: 70%;" data-aos="fade-up" data-aos-delay="800"></div>
-                                <div class="chart-bar active" style="--bar-height: 95%;" data-aos="fade-up" data-aos-delay="900"></div>
+
+                        <!-- Model Performance -->
+                        <div class="dw-section">
+                            <div class="dw-section-header">
+                                <span class="dw-label">MODEL PERFORMANCE</span>
+                                <span class="dw-badge">AUC-ROC 0.99</span>
                             </div>
-                            <div class="chart-line-container">
-                                <svg viewBox="0 0 300 100" class="trend-line">
-                                    <polyline
-                                        points="0,80 50,65 100,70 150,45 200,50 250,25 300,10"
-                                        fill="none"
-                                        stroke="#2563EB"
-                                        stroke-width="2.5"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
-                                        class="trend-path"
-                                    />
-                                    <circle cx="300" cy="10" r="4" fill="#2563EB" class="trend-dot"/>
-                                </svg>
-                            </div>
-                        </div>
-                        <div class="data-metrics">
-                            <div class="data-metric-item">
-                                <span class="data-metric-value">+88%</span>
-                                <span class="data-metric-label" data-es="Precisión Modelo" data-en="Model Accuracy">Precisión Modelo</span>
-                                <small style="font-size:0.6rem;opacity:0.55;margin-top:2px">Retail Rocket</small>
-                            </div>
-                            <div class="data-metric-item">
-                                <span class="data-metric-value">+60%</span>
-                                <span class="data-metric-label" data-es="Churn Detectado" data-en="Churn Detected">Churn Detectado</span>
-                                <small style="font-size:0.6rem;opacity:0.55;margin-top:2px">Online Retail II</small>
-                            </div>
-                            <div class="data-metric-item">
-                                <span class="data-metric-value">-12%</span>
-                                <span class="data-metric-label" data-es="Error Predicción" data-en="Prediction Error">Error Predicción</span>
-                                <small style="font-size:0.6rem;opacity:0.55;margin-top:2px">Forecasting Retail</small>
+                            <div class="dw-progress-group">
+                                <div class="dw-progress-row">
+                                    <span class="dw-prog-label">Accuracy</span>
+                                    <div class="dw-prog-bar-wrap">
+                                        <div class="dw-prog-bar" style="--prog: 88%"></div>
+                                    </div>
+                                    <span class="dw-prog-val">88%</span>
+                                </div>
+                                <div class="dw-progress-row">
+                                    <span class="dw-prog-label">Precision</span>
+                                    <div class="dw-prog-bar-wrap">
+                                        <div class="dw-prog-bar" style="--prog: 75%"></div>
+                                    </div>
+                                    <span class="dw-prog-val">75%</span>
+                                </div>
+                                <div class="dw-progress-row">
+                                    <span class="dw-prog-label">Recall</span>
+                                    <div class="dw-prog-bar-wrap">
+                                        <div class="dw-prog-bar" style="--prog: 82%"></div>
+                                    </div>
+                                    <span class="dw-prog-val">82%</span>
+                                </div>
+                                <div class="dw-progress-row">
+                                    <span class="dw-prog-label">F1 Score</span>
+                                    <div class="dw-prog-bar-wrap">
+                                        <div class="dw-prog-bar dw-prog-bar--accent" style="--prog: 79%"></div>
+                                    </div>
+                                    <span class="dw-prog-val">0.79</span>
+                                </div>
                             </div>
                         </div>
+
+                        <div class="dw-divider"></div>
+
+                        <!-- Key Results -->
+                        <div class="dw-section">
+                            <div class="dw-section-header">
+                                <span class="dw-label">KEY RESULTS</span>
+                            </div>
+                            <div class="dw-kpi-list">
+                                <div class="dw-kpi-row">
+                                    <span class="dw-kpi-icon"><i class="bi bi-currency-dollar"></i></span>
+                                    <span class="dw-kpi-name">Revenue Recuperable</span>
+                                    <span class="dw-kpi-value">$1.04M</span>
+                                </div>
+                                <div class="dw-kpi-row">
+                                    <span class="dw-kpi-icon"><i class="bi bi-people"></i></span>
+                                    <span class="dw-kpi-name">Segmento Alta Intención</span>
+                                    <span class="dw-kpi-value">28% conv.</span>
+                                </div>
+                                <div class="dw-kpi-row">
+                                    <span class="dw-kpi-icon"><i class="bi bi-database"></i></span>
+                                    <span class="dw-kpi-name">Eventos Analizados</span>
+                                    <span class="dw-kpi-value">2.7M+</span>
+                                </div>
+                            </div>
+                        </div>
+
                         <div class="data-status">
                             <span class="data-status-dot"></span>
-                            <span data-es="Análisis en tiempo real" data-en="Real-time analysis">Análisis en tiempo real</span>
+                            <span>Modelo listo para producción · Retail Rocket</span>
                         </div>
+
                     </div>
                 </div>
             </div>
