@@ -376,3 +376,16 @@ if (contactForm) {
         }
     });
 }
+
+// =============================================
+// MODAL: VER CREDENCIAL
+// =============================================
+document.querySelectorAll(".cert-view-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+        const img = btn.dataset.img;
+        const title = btn.dataset.title;
+        document.getElementById("certModalImg").src = img;
+        document.getElementById("certModalLabel").textContent = title;
+        new bootstrap.Modal(document.getElementById("certModal")).show();
+    });
+});

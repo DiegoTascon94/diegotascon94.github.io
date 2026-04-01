@@ -1461,6 +1461,62 @@ body {
     .cert-cred-meta { align-items: flex-start; }
 }
 
+/* Botón Ver credencial */
+.cert-view-btn {
+    display: inline-flex;
+    align-items: center;
+    margin-top: 0.9rem;
+    padding: 0.3rem 0.85rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--color-secundario);
+    background: transparent;
+    border: 1px solid rgba(37, 99, 235, 0.25);
+    border-radius: 20px;
+    cursor: pointer;
+    opacity: 0;
+    transform: translateY(4px);
+    transition: opacity 0.25s ease, transform 0.25s ease, background 0.2s ease, border-color 0.2s ease;
+}
+.cert-credential:hover .cert-view-btn {
+    opacity: 1;
+    transform: translateY(0);
+}
+.cert-view-btn:hover {
+    background: rgba(37, 99, 235, 0.07);
+    border-color: rgba(37, 99, 235, 0.5);
+}
+@media (hover: none) {
+    /* En táctil/móvil siempre visible */
+    .cert-view-btn { opacity: 1; transform: none; }
+}
+
+/* Modal credencial */
+.cert-modal-content {
+    border: none;
+    border-radius: 16px;
+    overflow: hidden;
+    background: #0F172A;
+}
+.cert-modal-header {
+    background: #0F172A;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    padding: 1rem 1.5rem;
+}
+.cert-modal-title {
+    color: rgba(255,255,255,0.85);
+    font-size: 0.88rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    margin: 0;
+}
+.cert-modal-body { background: #0F172A; }
+.cert-modal-img {
+    width: 100%;
+    display: block;
+    border-radius: 0 0 16px 16px;
+}
+
 /* =============================================
    EN PROGRESO — LEARNING TRACK
    ============================================= */

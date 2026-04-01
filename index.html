@@ -695,6 +695,9 @@
                             <span class="cert-badge">Estadística</span>
                             <span class="cert-badge">Git & GitHub</span>
                         </div>
+                        <button class="cert-view-btn" data-img="data_analyst_tripleten.jpg" data-title="Data Analyst — TripleTen">
+                            <i class="bi bi-eye me-1"></i>Ver credencial
+                        </button>
                     </div>
                 </div>
 
@@ -718,6 +721,9 @@
                             <span class="cert-badge">Matplotlib</span>
                             <span class="cert-badge">Estadística</span>
                         </div>
+                        <button class="cert-view-btn" data-img="certification_python.png" data-title="Data Analyst in Python — DataCamp">
+                            <i class="bi bi-eye me-1"></i>Ver credencial
+                        </button>
                     </div>
                 </div>
 
@@ -740,6 +746,9 @@
                             <span class="cert-badge">Email Marketing</span>
                             <span class="cert-badge">Customer Loyalty</span>
                         </div>
+                        <button class="cert-view-btn" data-img="marketing_digital_google.jpg" data-title="Digital Marketing & E-commerce — Google">
+                            <i class="bi bi-eye me-1"></i>Ver credencial
+                        </button>
                     </div>
                 </div>
 
@@ -1102,6 +1111,21 @@
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" defer></script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
+<!-- MODAL: VER CREDENCIAL -->
+<div class="modal fade" id="certModal" tabindex="-1" aria-labelledby="certModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content cert-modal-content">
+            <div class="modal-header cert-modal-header">
+                <h6 class="modal-title cert-modal-title" id="certModalLabel"></h6>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+            </div>
+            <div class="modal-body cert-modal-body p-0">
+                <img id="certModalImg" src="" alt="Certificado" class="cert-modal-img">
+            </div>
+        </div>
+    </div>
+</div>
+
 <script src="https://cdn.jsdelivr.net/npm/tsparticles-slim@2.12.0/tsparticles.slim.bundle.min.js" defer></script>
 <script src="script.js" defer></script>
 <!-- WHATSAPP FLOTANTE -->
