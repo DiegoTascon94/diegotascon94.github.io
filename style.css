@@ -581,6 +581,24 @@ body {
     font-weight: 600;
 }
 
+.industry-badge--link {
+    cursor: pointer;
+    transition: background 0.2s ease, border-color 0.2s ease, transform 0.15s ease;
+}
+.industry-badge--link:hover {
+    background: rgba(37, 99, 235, 0.15);
+    border-color: rgba(37, 99, 235, 0.5);
+    transform: translateY(-1px);
+}
+
+.industry-badge--dev {
+    background: rgba(148, 163, 184, 0.06);
+    color: var(--color-acento);
+    border: 1px dashed rgba(148, 163, 184, 0.35);
+    font-style: italic;
+    opacity: 0.75;
+}
+
 
 /* =============================================
    FEATURED PROJECTS — SECCIÓN Y TABS
@@ -1340,15 +1358,16 @@ body {
    CERTIFICACIONES — CREDENTIAL CARDS
    ============================================= */
 .cert-credential-list {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    max-width: 820px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
     margin: 0 auto;
 }
 
 .cert-credential {
     display: flex;
+    flex-direction: column;
+    position: relative;
     background: white;
     border-radius: 16px;
     border: 1px solid #E2E8F0;
@@ -1365,112 +1384,110 @@ body {
 
 .cert-cred-left {
     background: linear-gradient(160deg, #0F172A 0%, #1e293b 100%);
-    width: 110px;
-    flex-shrink: 0;
+    width: 100%;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    justify-content: center;
-    gap: 0.75rem;
-    padding: 1.5rem 0.75rem;
+    justify-content: space-between;
+    padding: 1rem 1.25rem;
 }
 
 .cert-cred-org {
-    font-size: 0.62rem;
+    font-size: 0.7rem;
     font-weight: 800;
     color: rgba(255, 255, 255, 0.6);
     text-transform: uppercase;
     letter-spacing: 0.12em;
-    text-align: center;
     line-height: 1.3;
 }
 
 .cert-cred-seal {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
     color: var(--color-secundario);
     filter: drop-shadow(0 0 8px rgba(37, 99, 235, 0.6));
 }
 
 .cert-cred-right {
     flex: 1;
-    padding: 1.5rem 1.75rem;
+    padding: 1.25rem;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    gap: 0.75rem;
 }
 
 .cert-cred-header {
     display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    gap: 1rem;
-    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 0.5rem;
 }
 
 .cert-cred-title {
-    font-size: 1.15rem;
+    font-size: 1rem;
     font-weight: 700;
     color: var(--color-principal);
     margin: 0;
+    line-height: 1.3;
 }
 
 .cert-cred-meta {
     display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    gap: 0.3rem;
-    flex-shrink: 0;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.4rem;
 }
 
 .cert-cred-date {
-    font-size: 0.78rem;
+    font-size: 0.75rem;
     color: var(--color-acento);
 }
 
 .cert-cred-done {
-    font-size: 0.75rem;
+    font-size: 0.72rem;
     font-weight: 700;
     color: #16A34A;
     background: rgba(22, 163, 74, 0.08);
     border: 1px solid rgba(22, 163, 74, 0.2);
-    padding: 0.2rem 0.65rem;
+    padding: 0.18rem 0.6rem;
     border-radius: 20px;
 }
 
 .cert-skills {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.4rem;
+    gap: 0.35rem;
 }
 
 .cert-badge {
     background: rgba(37, 99, 235, 0.05);
     color: var(--color-secundario);
     border: 1px solid rgba(37, 99, 235, 0.2);
-    padding: 0.25rem 0.7rem;
+    padding: 0.2rem 0.6rem;
     border-radius: 6px;
-    font-size: 0.78rem;
+    font-size: 0.73rem;
     font-weight: 600;
 }
 
+@media (max-width: 992px) {
+    .cert-credential-list { grid-template-columns: repeat(2, 1fr); }
+}
+
 @media (max-width: 576px) {
-    .cert-cred-left { width: 80px; }
-    .cert-cred-org { font-size: 0.55rem; }
-    .cert-cred-right { padding: 1.25rem; }
-    .cert-cred-header { flex-direction: column; }
-    .cert-cred-meta { align-items: flex-start; }
+    .cert-credential-list { grid-template-columns: 1fr; }
 }
 
 /* Botón Ver credencial */
 .cert-view-btn {
+    position: absolute;
+    bottom: 0.9rem;
+    right: 0.9rem;
     display: inline-flex;
     align-items: center;
-    margin-top: 0.9rem;
-    padding: 0.3rem 0.85rem;
-    font-size: 0.75rem;
+    padding: 0.28rem 0.75rem;
+    font-size: 0.72rem;
     font-weight: 600;
     color: var(--color-secundario);
-    background: transparent;
+    background: white;
     border: 1px solid rgba(37, 99, 235, 0.25);
     border-radius: 20px;
     cursor: pointer;
@@ -1960,6 +1977,12 @@ body {
     background: rgba(34, 197, 94, 0.12);
     color: #86EFAC;
     border: 1px solid rgba(34, 197, 94, 0.2);
+}
+
+.story-decision {
+    background: rgba(37, 99, 235, 0.12);
+    color: #93C5FD;
+    border: 1px solid rgba(37, 99, 235, 0.2);
 }
 
 .story-text {

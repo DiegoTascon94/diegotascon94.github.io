@@ -231,21 +231,30 @@ if (typeof tsParticles !== "undefined") {
 // =============================================
 // FILTRO DE PROYECTOS (soporta multi-categoría)
 // =============================================
+function applyProjectFilter(filter) {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    const activeBtn = document.querySelector(`.filter-btn[data-filter="${filter}"]`);
+    if (activeBtn) activeBtn.classList.add('active');
+
+    document.querySelectorAll('.project-item').forEach(item => {
+        const categories = item.getAttribute('data-category').split(' ');
+        if (filter === 'all' || categories.includes(filter)) {
+            item.classList.remove('hidden');
+        } else {
+            item.classList.add('hidden');
+        }
+    });
+}
+
 document.querySelectorAll('.filter-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
+    btn.addEventListener('click', () => applyProjectFilter(btn.getAttribute('data-filter')));
+});
 
-        const filter = btn.getAttribute('data-filter');
-
-        document.querySelectorAll('.project-item').forEach(item => {
-            const categories = item.getAttribute('data-category').split(' ');
-            if (filter === 'all' || categories.includes(filter)) {
-                item.classList.remove('hidden');
-            } else {
-                item.classList.add('hidden');
-            }
-        });
+document.querySelectorAll('.industry-badge--link').forEach(badge => {
+    badge.addEventListener('click', () => {
+        const filter = badge.getAttribute('data-filter');
+        applyProjectFilter(filter);
+        document.getElementById('projects').scrollIntoView({ behavior: 'smooth' });
     });
 });
 
