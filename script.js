@@ -401,6 +401,52 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     // =============================================
+    // PARTÍCULAS EN CONTACTO
+    // =============================================
+    if (typeof tsParticles !== "undefined") {
+        tsParticles.load("particles-contact", {
+            fpsLimit: 40,
+            particles: {
+                number: {
+                    value: 70,
+                    density: { enable: true, area: 900 }
+                },
+                color: { value: "#2563EB" },
+                shape: { type: "circle" },
+                opacity: {
+                    value: 0.4,
+                    random: true,
+                    animation: { enable: true, speed: 0.6, minimumValue: 0.15, sync: false }
+                },
+                size: {
+                    value: { min: 1, max: 3 },
+                    random: true
+                },
+                links: {
+                    enable: true,
+                    distance: 140,
+                    color: "#2563EB",
+                    opacity: 0.18,
+                    width: 1
+                },
+                move: {
+                    enable: true,
+                    speed: 0.6,
+                    direction: "none",
+                    random: true,
+                    straight: false,
+                    outModes: "out"
+                }
+            },
+            interactivity: {
+                events: { onHover: { enable: true, mode: "grab" } },
+                modes: { grab: { distance: 160, links: { opacity: 0.4 } } }
+            },
+            detectRetina: false
+        });
+    }
+
+    // =============================================
     // BARRA DE PROGRESO DE SCROLL
     // =============================================
     const scrollBar = document.getElementById('scroll-progress');
