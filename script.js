@@ -400,4 +400,24 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
+    // =============================================
+    // EFECTO COMETA EN CURSOR (solo desktop)
+    // =============================================
+    if (!window.matchMedia('(hover: none)').matches) {
+        let lastTrail = 0;
+
+        document.addEventListener('mousemove', (e) => {
+            const now = Date.now();
+            if (now - lastTrail < 30) return;
+            lastTrail = now;
+
+            const dot = document.createElement('div');
+            dot.className = 'cursor-comet';
+            const size = Math.random() * 6 + 4;
+            dot.style.cssText = `left:${e.clientX}px;top:${e.clientY}px;width:${size}px;height:${size}px`;
+            document.body.appendChild(dot);
+            dot.addEventListener('animationend', () => dot.remove(), { once: true });
+        });
+    }
+
 });
