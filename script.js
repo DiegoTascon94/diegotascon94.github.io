@@ -33,7 +33,7 @@ function toggleLanguage() {
         if (!newText) return;
 
         if (el.classList.contains("header-title-sub")) {
-            typeWriterEffect(el, newText);
+            typeWriterEffectWithCursor(el, newText);
         } else if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
             el.placeholder = newText;
         } else if (newText.includes('<')) {
@@ -85,7 +85,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const subTitle = document.querySelector(".header-title-sub");
     if (subTitle) {
         const initialText = subTitle.getAttribute(`data-${currentLang}`);
-        if (initialText) typeWriterEffect(subTitle, initialText);
+        if (initialText) typeWriterEffectWithCursor(subTitle, initialText);
     }
 
     // Activar highlight de sección al cargar
@@ -399,6 +399,39 @@ document.addEventListener("DOMContentLoaded", () => {
             new bootstrap.Modal(document.getElementById("certModal")).show();
         });
     });
+
+    // =============================================
+    // BARRA DE PROGRESO DE SCROLL
+    // =============================================
+    const scrollBar = document.getElementById('scroll-progress');
+    if (scrollBar) {
+        window.addEventListener('scroll', () => {
+            const scrollTop = window.scrollY;
+            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+            scrollBar.style.width = `${(scrollTop / docHeight) * 100}%`;
+        }, { passive: true });
+    }
+
+    // =============================================
+    // CURSOR PARPADEANTE EN TYPEWRITER
+    // =============================================
+    function typeWriterEffectWithCursor(element, text) {
+        if (!element) return;
+        element.textContent = "";
+        element.classList.add('typewriter-active');
+        let i = 0;
+
+        function type() {
+            if (i < text.length) {
+                element.textContent += text.charAt(i);
+                i++;
+                setTimeout(type, 22);
+            } else {
+                element.classList.remove('typewriter-active');
+            }
+        }
+        type();
+    }
 
     // =============================================
     // EFECTO COMETA EN CURSOR (solo desktop)

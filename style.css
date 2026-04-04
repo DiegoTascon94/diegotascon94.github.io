@@ -2378,6 +2378,37 @@ body {
 }
 
 /* =============================================
+   BARRA DE PROGRESO DE SCROLL
+   ============================================= */
+#scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 3px;
+    width: 0%;
+    background: linear-gradient(90deg, var(--color-secundario), #60A5FA);
+    z-index: 9999;
+    transition: width 0.1s linear;
+    pointer-events: none;
+}
+
+/* =============================================
+   CURSOR PARPADEANTE EN TYPEWRITER
+   ============================================= */
+.typewriter-active::after {
+    content: '|';
+    color: var(--color-secundario);
+    font-weight: 300;
+    margin-left: 2px;
+    animation: cursor-blink 0.7s step-end infinite;
+}
+
+@keyframes cursor-blink {
+    0%, 100% { opacity: 1; }
+    50%       { opacity: 0; }
+}
+
+/* =============================================
    EFECTO COMETA EN CURSOR
    ============================================= */
 .cursor-comet {
