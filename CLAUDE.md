@@ -28,9 +28,17 @@ The entire site lives in three files:
 
 **Section layout**: All sections use the `.page-section` class with `overflow-x: hidden` to prevent horizontal scroll bleed from AOS animations.
 
-**Tab systems**: Skills, Certifications, and Featured Projects each use a Bootstrap tab pattern (`nav-tabs` / `tab-pane`) with custom JS to handle carousel resets on tab switch.
+**Tab systems**: Skills, Formation, and Featured Projects use a **custom** tab system (not Bootstrap's native nav-tabs). Tabs have class `.skills-tab` / `.formation-tab` / `.featured-tab` with a `data-tab="<name>"` attribute; the corresponding content panel must have `id="tab-<name>"`. Active state is toggled via the `.active` class. Adding a new tab group requires calling `initTabs(tabSelector, contentSelector)`.
 
-**Stats bar counters**: Animated on first scroll-into-view using `IntersectionObserver`. Counter targets are set via `data-target` attribute.
+**Dashboard carousel**: Custom `.dashboard-carousel` component with touch swipe, dot navigation, prev/next buttons, and optional autoplay. Set `data-autoplay="<ms>"` on the carousel element to enable autoplay (pauses on hover). Slides are `.dashboard-carousel-slide` inside a `.dashboard-carousel-track`.
+
+**Project filter**: `.project-item` cards are filtered by `.filter-btn[data-filter="<value>"]` buttons. Categories are space-separated in `data-category` (supports multi-category). Clicking an `.industry-badge--link[data-filter="<value>"]` also triggers the filter and scrolls to `#projects`.
+
+**Stats bar counters**: Animated on first scroll-into-view using `IntersectionObserver`. Counter targets are set via `data-target` attribute. The `#stat-projects` counter's target is **auto-set** at runtime from the count of `.project-item` elements — do not hardcode it.
+
+**Contact form**: `#contact-form` submits async to Formspree (the `action` URL is on the form element). Success/error feedback via `#form-success` / `#form-error` (Bootstrap `d-none` toggle).
+
+**Certification modal**: `.cert-view-btn` buttons open a shared Bootstrap modal (`#certModal`). Set `data-img` and `data-title` on the button; JS populates `#certModalImg` and `#certModalLabel`.
 
 **Navbar active section**: Tracked on scroll using `updateActiveNavLink()`. Active link gets the `.active-section` class (not Bootstrap's `.active`).
 
