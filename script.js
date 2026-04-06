@@ -500,3 +500,5 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 });
+
+// Prueba de conexion SSH con GitHub - 2026-04-05
