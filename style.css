@@ -161,6 +161,7 @@ body {
     .header-title-sub { max-width: 100%; margin: 0 auto; }
     .profile-photo { width: 200px; height: 200px; }
     .hero-photo-wrapper::before { width: 250px; height: 250px; }
+    .hero-text-col { margin-top: 2rem; }
 }
 
 /* =============================================
